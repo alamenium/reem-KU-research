@@ -1,0 +1,75 @@
+
+#box{
+    width: 500px;
+    padding: 210px;
+    height: 500px;
+    background-color: lightblue;
+    margin-left: auto;
+    margin-right: auto;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    border-radius: 20%;
+}
+
+.minibox{
+    width:200;
+    height:200;
+    background:lightblue;
+}
+
+.defaultHead{
+    width: 500px;
+    height: 500px;
+}
+
+.mouth{
+    position:absolute;
+    top:0px;
+}
+.eyes{
+    position:absolute;
+    top:0px;
+}
+
+.nose{
+    position:absolute;
+    top:0px;
+}
+
+.hair{
+    position:absolute;
+    top:10px;
+}
+
+.brows{
+    position:absolute;
+    top:0px;
+}
+
+.conchlear{
+    position:absolute;
+    top:0px;
+}
+
+.clothes{
+    position:absolute;
+    top:0px;
+}
+.glasses{
+    position:absolute;
+    top:0px;
+}
+.conchlear{
+    position:absolute;
+    top:0px;
+}
+
+.flexContainers{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.border{
+    border:1px solid lightblue !important
+}
