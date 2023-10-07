@@ -1,0 +1,72 @@
+:root {
+    --size:727px;
+  }
+#boxstory{
+    width: 250px;
+    
+    height: 250px;
+
+    margin-left: auto;
+    margin-right: auto;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    border-radius: 20%;
+}
+.backhead{
+    width: 250px;
+    
+    height: 250px;
+
+    margin-left: auto;
+    margin-right: auto;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    border-radius: 20%;
+}
+.mouthstory{
+    position:absolute;
+    top:var(--size);;
+}
+.eyesstory{
+    position:absolute;
+    top:var(--size);;
+}
+
+.nosestory{
+    position:absolute;
+    top:var(--size);;
+}
+
+.hairstory{
+    position:absolute;
+    top:var(--size);
+}
+
+.browsstory{
+    position:absolute;
+    top:var(--size);;
+}
+
+.conchlearstory{
+    position:absolute;
+    top:var(--size);;
+}
+
+.clothesstory{
+    position:absolute;
+    top:var(--size);;
+}
+
+.glassesstory{
+    position:absolute;
+    top:var(--size);;
+}
+
+.flexRow{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+

@@ -1,0 +1,184 @@
+{
+  "backHead": {
+    "files": [
+      "black1B.png",
+      "black2B.png",
+      "black3B.png",
+      "black4B.png",
+      "blonde1B.png",
+      "blonde2B.png",
+      "blonde3B.png",
+      "blonde4B.png",
+      "blue.png",
+      "blue2.png",
+      "brown1B.png",
+      "brown2B.png",
+      "brown3B.png",
+      "brown4B.png",
+      "orange.png",
+      "peach2.png",
+      "pink.png",
+      "purple2.png"
+    ]
+  },
+  "clothes": {
+    "files": [
+      "orange.png",
+      "pink.png",
+      "red.png"
+    ]
+  },
+  "cochlear": {
+    "files": [
+      "orange.png",
+      "purple.png",
+      "red.png"
+    ]
+  },
+  "default": {
+    "files": [
+      "default.png"
+    ]
+  },
+  "files": [
+    "defaultBlank.png"
+  ],
+  "eyebrows": {
+    "files": [
+      "1.png",
+      "2.png",
+      "3.png",
+      "4.png",
+      "5.png",
+      "black1.png",
+      "black2.png",
+      "black3.png",
+      "black4.png",
+      "black5.png",
+      "blonde1.png",
+      "blonde2.png",
+      "blonde3.png",
+      "blonde4.png",
+      "blonde5.png"
+    ]
+  },
+  "eyes": {
+    "files": [
+      "basicBlack.png",
+      "basicBrown.png",
+      "basicGreen.png",
+      "closeBlack.png",
+      "closeBrown.png",
+      "closeGreen.png",
+      "cuteBlack.png",
+      "cuteBrown.png",
+      "cuteGreen.png",
+      "lashesBlack.png",
+      "lashesBrown.png",
+      "lashesGreen.png"
+    ]
+  },
+  "face": {
+    "files": [
+      "DarkRoundFace.png",
+      "lightRoundFace.png",
+      "skinny.png",
+      "skinnyLightFace.png",
+      "square.png",
+      "squareLightFace.png"
+    ]
+  },
+  "glasses": {
+    "files": [
+      "blue.png",
+      "blueDots.png",
+      "purple.png",
+      "purpleDots.png",
+      "red.png",
+      "redDots.png"
+    ]
+  },
+  "hair": {
+    "files": [
+      "black1.png",
+      "black1R.png",
+      "black1S.png",
+      "black2.png",
+      "Black2R.png",
+      "black2S.png",
+      "black3.png",
+      "black3R.png",
+      "black3S.png",
+      "black4.png",
+      "black4R.png",
+      "black4S.png",
+      "blackH1.png",
+      "blackH1R.png",
+      "blackH1S.png",
+      "blackH2.png",
+      "blackH2R.png",
+      "blackH2S.png",
+      "blackH3.png",
+      "blackH3R.png",
+      "blackH3S.png",
+      "blonde1.png",
+      "blonde1R.png",
+      "blonde1S.png",
+      "blonde2.png",
+      "blonde2R.png",
+      "blonde2S.png",
+      "blonde3R.png",
+      "blonde3S.png",
+      "blonde4.png",
+      "blonde4R.png",
+      "blonde4S.png",
+      "blondeH1.png",
+      "blondeH1R.png",
+      "blondeH1S.png",
+      "blondeH2.png",
+      "blondeH2R.png",
+      "blondeH2S.png",
+      "blondeH3.png",
+      "blondeH3R.png",
+      "blondeH3S.png",
+      "brown1.png",
+      "brown1R.png",
+      "brown1S.png",
+      "brown2.png",
+      "brown2R.png",
+      "brown2S.png",
+      "brown3.png",
+      "brown3R.png",
+      "brown3S.png",
+      "brown4.png",
+      "brown4R.png",
+      "brown4S.png",
+      "brownH1.png",
+      "brownH1R.png",
+      "brownH1S.png",
+      "brownH2.png",
+      "brownH2R.png",
+      "brownH2S.png",
+      "brownH3.png",
+      "brownH3R.png",
+      "brownH3S.png"
+    ]
+  },
+  "mouth": {
+    "files": [
+      "bigOpen.png",
+      "closed.png",
+      "o.png",
+      "open.png"
+    ]
+  },
+  "nose": {
+    "files": [
+      "1.png",
+      "2.png",
+      "3.png",
+      "4.png",
+      "5.png"
+    ]
+  }
+}

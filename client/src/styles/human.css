@@ -1,0 +1,41 @@
+#human{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#face{
+    height: 350px;
+    margin: auto;
+}
+
+#eyes,
+#nose,
+#clothes,
+#glasses,
+#mouth{
+    top: -21px;
+}
+
+
+#hair{
+    z-index: 10;
+    top: -22px;
+    height: 350px !important;
+}
+
+#nose{
+    z-index: 100;
+}
+#glasses{
+    z-index: 200;
+}
+
+#mouth{
+    z-index: 300;
+}
+
+#human img{
+    height: 350px;
+    position: absolute;
+}
