@@ -1,4 +1,4 @@
-import faceSRC from "../images/avatar/face/DarkRoundFace.png";
+import faceSRC from "../images/avatar/face/darkRoundFace.png";
 import '../styles/human.css';
 import eyeSRC from "../images/avatar/eyes/basicGreen.png";
 import clothesSRC from "../images/avatar/clothes/orange.png";
@@ -12,7 +12,7 @@ import {useEffect, useState} from "react";
 
 function Human(){
 
-    const { face, hair, eyes, clothes, glasses, mouth, nose } = useSelector((state) => state.avatar);
+    const { face, hair, eyes,cochlear, clothes, glasses, mouth, nose } = useSelector((state) => state.avatar);
     const [currHair, changeCurrHair] = useState("none");
 
     useEffect(() => {
@@ -29,6 +29,7 @@ function Human(){
             <img id={"face"} src={face} alt={""}/>
             {hair!=="none" && <img id={"hair"} src={currHair} alt={""}/>}
             {eyes!=="none" && <img id={"eyes"} src={eyes} alt={""}/>}
+            {cochlear!=="none" && <img id={"cochlear"} src={cochlear} alt={""}/>}
             {clothes!=="none" && <img id={"clothes"} src={clothes} alt={""}/>}
             {glasses!=="none" && <img id={"glasses"} src={glasses} alt={""}/>}
             {mouth!=="none" && <img id={"mouth"} src={mouth} alt={""}/>}

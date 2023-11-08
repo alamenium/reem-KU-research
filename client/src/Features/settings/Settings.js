@@ -18,7 +18,7 @@ function Settings() {
     );
 
     const [msg, setMsg] = useState('Save Changes');
-    const [link, setLink] = useState('./story');
+    const [link, setLink] = useState('../storystart');
     const [text, setText] = useState('Story');
 
     const audioOn = () => {
@@ -47,13 +47,13 @@ function Settings() {
 
     const avatarOn = () => {
         dispatch(setAvatar('On'));
-        setLink("./avatar")
+        setLink("../avatar")
         setText("Avatar Creation")
     };
 
     const avatarOff = () => {
         dispatch(setAvatar('Off'));
-        setLink("./story")
+        setLink("../storystart")
         setText("Story")
     };
 
@@ -153,11 +153,6 @@ function Settings() {
                     Off
                 </Button>
             </div>
-
-            <Button variant="primary" onClick={saveChange} className="save-button">
-                {msg}
-            </Button>
-
             <div className="settings-info">
                 <div className="default-settings">
                     <h5>Default</h5>

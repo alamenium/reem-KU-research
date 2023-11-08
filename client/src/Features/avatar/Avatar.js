@@ -10,6 +10,7 @@ import avatarCSS from '../../styles/avatar.css';
 import DisplayOptions from "./DisplayOptions";
 import Human from "../../components/Human";
 import white_bg from "../../images/bg-white.png";
+import {NavLink} from "react-router-dom";
 function Avatar() {
     document.querySelector("body").style.backgroundImage = `url(${white_bg})`;
     const [activeTab, setActiveTab] = useState('face');
@@ -35,9 +36,17 @@ function Avatar() {
 
     return (
         <main>
-        <div id={"avatar"}>
+       <div id={"avatar"}>
+           <NavLink
+               className="nav-link"
+               exact
+               to={"../storystart"}
+               activeClassName="nav-link-active"
+           >
 
-            <Human/>
+               <button className={"btn blue-btn"}>Story ></button>
+           </NavLink>
+           <Human/>
             <div className="button-container">
                 <button
                     className={`btn ${activeTab === 'face' ? 'active' : ''} ${
@@ -46,6 +55,23 @@ function Avatar() {
                     onClick={() => handleTabClick('face')}
                 >
                     Face
+                </button>
+                <button
+                    className={`btn ${activeTab === 'color' ? 'active' : ''} ${
+                        clickedTab === 'color' ? 'changed' : ''
+                    }`}
+                    onClick={() => handleTabClick('color')}
+                >
+                    Skin Tone
+                </button>
+
+                <button
+                    className={`btn ${activeTab === 'clothes' ? 'active' : ''} ${
+                        clickedTab === 'clothes' ? 'changed' : ''
+                    }`}
+                    onClick={() => handleTabClick('clothes')}
+                >
+                    Clothes
                 </button>
                 <button
                     className={`btn ${activeTab === 'eyes' ? 'active' : ''} ${
@@ -63,13 +89,15 @@ function Avatar() {
                 >
                     Hair
                 </button>
+
+
                 <button
-                    className={`btn ${activeTab === 'clothes' ? 'active' : ''} ${
-                        clickedTab === 'clothes' ? 'changed' : ''
+                    className={`btn ${activeTab === 'cochlear' ? 'active' : ''} ${
+                        clickedTab === 'cochlear' ? 'changed' : ''
                     }`}
-                    onClick={() => handleTabClick('clothes')}
+                    onClick={() => handleTabClick('cochlear')}
                 >
-                    Clothes
+                    Cochlear
                 </button>
                 <button
                     className={`btn ${activeTab === 'glasses' ? 'active' : ''} ${
@@ -95,6 +123,7 @@ function Avatar() {
                 >
                     Nose
                 </button>
+
             </div>
 
         {/* Render the selected tab's content here */}

@@ -11,6 +11,14 @@
    box-sizing: border-box;
 }
 
+.blue-btn{
+    background-color: dodgerblue !important;
+    color: white !important;
+    padding: 10px 30px!important;
+    float: right;
+    margin-right: 1rem!important;
+}
+
 #avatar .btn {
     border-radius: 20px;
     font-weight: bold;

@@ -2,6 +2,8 @@
     width: 100%;
     display: flex;
     justify-content: center;
+    position: relative;
+    top: -2rem;
 }
 
 #face{
@@ -13,7 +15,8 @@
 #nose,
 #clothes,
 #glasses,
-#mouth{
+#mouth,
+#cochlear{
     top: -21px;
 }
 
@@ -23,6 +26,10 @@
     top: -22px;
     height: 350px !important;
 }
+#cochlear{
+    z-index: 2000;
+}
+
 
 #nose{
     z-index: 100;

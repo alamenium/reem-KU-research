@@ -153,3 +153,26 @@ body{
     outline: none; /* Remove default focus outline */
     border-color: #007bff; /* Change border color on focus (blue) */
 }
+
+.kids{
+    position: absolute;
+    z-index: -1000;
+    top: 250px;
+    width: 500px;
+    animation: animate 3s ease-in-out infinite;
+}
+
+@keyframes animate {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.2); /* Large size */
+        opacity: 0.4;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}

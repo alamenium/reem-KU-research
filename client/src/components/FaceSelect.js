@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import '../styles/displayChoices.css';
 function FaceSelector({type}) {
     // Define an array of facial feature image filenames
-    const facialFeatureImages = ['DarkRoundFace.png', 'lightRoundFace.png', 'skinny.png', 'skinnyLightFace.png', 'square.png', 'squareLightFace.png'];
+    const facialFeatureImages = ['darkRoundFace.png', 'lightRoundFace.png', 'darkSkinny.png', 'lightSkinny.png', 'darkSquare.png', 'lightSquare.png'];
 
     // State to track the selected facial feature and animation flag
     const [selectedFeature, setSelectedFeature] = useState(null);

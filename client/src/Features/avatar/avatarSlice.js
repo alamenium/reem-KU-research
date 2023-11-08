@@ -2,7 +2,9 @@ import {createSlice} from '@reduxjs/toolkit';
 
 const initialState = {
     face: "../images/avatar/default/default.png",
+    color: "light",
     hair: "none",
+    cochlear: "none",
     eyes: "none",
     clothes: "none",
     skin: "none",
@@ -16,10 +18,16 @@ const avatarSlice = createSlice({
     initialState,
     reducers: {
         setFace(state, action) {
-                    state.face = action.payload;
+            state.face = action.payload;
+        },
+        setColor(state, action) {
+            state.color = action.payload;
         },
         setHair(state, action) {
-                    state.hair = action.payload;
+            state.hair = action.payload;
+        },
+        setCochlear(state, action) {
+            state.cochlear = action.payload;
         },
         setEyes(state, action) {
                     state.eyes = action.payload;
@@ -43,5 +51,5 @@ const avatarSlice = createSlice({
     }
 });
 
-export const { setFace, setHair, setEyes, setClothes, setSkin, setGlasses, setMouth, setNose } = avatarSlice.actions;
+export const { setFace, setCochlear, setColor, setHair, setEyes, setClothes, setSkin, setGlasses, setMouth, setNose } = avatarSlice.actions;
 export default avatarSlice.reducer;

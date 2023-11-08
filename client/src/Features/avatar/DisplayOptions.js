@@ -4,17 +4,17 @@ import fileData from '../../folder_layout.json';
 
 import { useDispatch, useSelector } from 'react-redux';
 
-import { setFace, setHair,
+import { setFace, setColor, setHair,
     setEyes, setClothes,
     setSkin, setGlasses,
-    setMouth, setNose } from "./avatarSlice";
+    setMouth, setNose , setCochlear} from "./avatarSlice";
 
 function DisplayOptions({type}) {
     const dispatch = useDispatch();
 
-
+    const {color, face } = useSelector((state) => state.avatar);
     // Define an array of facial feature image filenames
-    const featureImages = fileData[type]["files"].filter(f=> type !== "hair" || (f[f.length-5] !== "R" &&  f[f.length-5] !== "S"));
+    const featureImages = fileData[type]["files"].filter(f=> type !== "hair" && type !== "face" || (f[f.length-5] !== "R" &&  f[f.length-5] !== "S"&&type!=="face")|| ( type !== "hair" && f.startsWith(color)));
 
     // State to track the selected facial feature and animation flag
     const [selectedFeature, setSelectedFeature] = useState(null);
@@ -25,8 +25,27 @@ function DisplayOptions({type}) {
             case "face":
                 dispatch (setFace(value));
                 break;
+            case "color":
+                if(value.includes("light")) {
+                    dispatch(setColor("light"));
+                    if(face.includes("dark"))
+                    {
+                        dispatch (setFace(face.replace("dark", "light")));
+                    }
+                }else{
+                    dispatch(setColor("dark"));
+                    if(face.includes("light"))
+                    {
+                        dispatch (setFace(face.replace("light", "dark")));
+                    }
+                }
+
+                break;
             case "hair":
                 dispatch( setHair(value));
+                break;
+            case "cochlear":
+                dispatch( setCochlear(value));
                 break;
             case "eyes":
                 dispatch( setEyes(value));
@@ -69,7 +88,21 @@ function DisplayOptions({type}) {
         {/*    )}*/}
         {/*</div>*/}
         <div  className={"displayChoices"}>
+
             <ul className="feature-list">
+
+                {(type === "hair"|| type==="cochlear" || type==="glasses" || type==="mouth") && <li key={"none"} className="feature-item">
+                    <div
+                        onClick={() => handleFeatureSelect("none")}
+                        className={`feature-button ${selectedFeature === "none" ? 'selected' : ''}`}
+                    >
+                        <img
+                            src={require(`../../images/cross.png`)}
+                            alt={`Feature none`}
+                            className="feature-image"
+                        />
+                    </div>
+                </li>},
                 {featureImages.map((imageName, index) => (
                     <li key={index} className="feature-item">
                         <div
@@ -83,7 +116,7 @@ function DisplayOptions({type}) {
                             />
                         </div>
                     </li>
-                ))}
+                ))},
             </ul>
 
         </div>

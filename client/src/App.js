@@ -8,8 +8,8 @@ import { ProvideAuth } from './util/authContext';
 import ProtectedRoute from './components/ProtectedRoute';
 import Settings from './Features/settings/Settings';
 import Avatar from './Features/avatar/Avatar';
-import Story from './components/Story';
-import StoryStart from './components/StoryStart';
+import Story from './Features/story/Story';
+import StoryStart from './Features/story/StoryStart';
 // Import the necessary components and functions for Redux
 import { Provider } from 'react-redux';
 import store from './store'; // Import your Redux store
@@ -32,15 +32,7 @@ function App() {
                             }
                         />
                         <Route
-                            path="/story"
-                            element={
-                                <ProtectedRoute>
-                                    <Story />
-                                </ProtectedRoute>
-                            }
-                        />
-                        <Route
-                            path="/settings/avatar"
+                            path="/avatar"
                             element={
                                     <Avatar />
                             }
@@ -48,9 +40,13 @@ function App() {
                         <Route
                             path="/storystart"
                             element={
-                                <ProtectedRoute>
-                                    <StoryStart />
-                                </ProtectedRoute>
+                                <StoryStart />
+                            }
+                        />
+                        <Route
+                            path="/story"
+                            element={
+                                <Story />
                             }
                         />
                     </Routes>

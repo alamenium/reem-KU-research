@@ -80,12 +80,18 @@
   },
   "face": {
     "files": [
-      "DarkRoundFace.png",
+      "darkRoundFace.png",
       "lightRoundFace.png",
-      "skinny.png",
-      "skinnyLightFace.png",
-      "square.png",
-      "squareLightFace.png"
+      "darkSkinny.png",
+      "lightSkinny.png",
+      "darkSquare.png",
+      "lightSquare.png"
+    ]
+  },
+  "color": {
+    "files": [
+      "darkRoundFace.png",
+      "lightRoundFace.png"
     ]
   },
   "glasses": {

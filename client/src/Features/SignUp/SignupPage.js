@@ -5,6 +5,7 @@ import '../../styles/Homepage.css';
 import FrontPG from '../../images/frontPg.png';
 import "../../Fonts/stylesheet.css"
 import newstudent from '../../images/newstudent.png'
+import kids from "../../images/kids.png"
 const styles = {
     wrapper: {
         marginTop: '2rem',
@@ -60,6 +61,7 @@ function SignupPage() {
             {/*    <h1 className="gradient-text">The New Student</h1>*/}
             {/*</header>*/}
             <img className={"newStudent"} src={newstudent} alt={"new student"}/>
+            <img className={"kids"} src={kids} alt={"new student"}/>
             <div className="image-container">
                 <img width={600} height={600} src={FrontPG} alt="Front Page" />
             </div>
