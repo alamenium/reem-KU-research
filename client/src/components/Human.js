@@ -18,7 +18,7 @@ function Human(){
     useEffect(() => {
             if(face.includes("Round"))
                 changeCurrHair(hair.slice(0, hair.length-4)+"R.png");
-            else if(face.includes("square"))
+            else if(face.includes("Square"))
                 changeCurrHair(hair.slice(0, hair.length-4)+"S.png");
             else
                 changeCurrHair(hair.slice(0, hair.length-4)+".png");

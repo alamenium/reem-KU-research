@@ -14,7 +14,7 @@ function DisplayOptions({type}) {
 
     const {color, face } = useSelector((state) => state.avatar);
     // Define an array of facial feature image filenames
-    const featureImages = fileData[type]["files"].filter(f=> type !== "hair" && type !== "face" || (f[f.length-5] !== "R" &&  f[f.length-5] !== "S"&&type!=="face")|| ( type !== "hair" && f.startsWith(color)));
+    const featureImages = fileData[type]["files"].filter(f=> type !== "hair" && type !== "face" && type !== "color"|| (f[f.length-5] !== "R" &&  f[f.length-5] !== "S"&&type!=="face"&& type !== "color")|| ( type !== "hair" && f.startsWith(color) && type !== "color") || (type === "color" && f.includes("less") && (face.includes("Round") && f.includes("Round") || face.includes("Square") && f.includes("Square") || face.includes("Skinny") && f.includes("Skinny") )));
 
     // State to track the selected facial feature and animation flag
     const [selectedFeature, setSelectedFeature] = useState(null);
@@ -28,16 +28,13 @@ function DisplayOptions({type}) {
             case "color":
                 if(value.includes("light")) {
                     dispatch(setColor("light"));
-                    if(face.includes("dark"))
-                    {
-                        dispatch (setFace(face.replace("dark", "light")));
-                    }
-                }else{
+                    dispatch (setFace(face.replace("dark", "light").replace("black", "light")));
+                }else if(value.includes("dark")){
                     dispatch(setColor("dark"));
-                    if(face.includes("light"))
-                    {
-                        dispatch (setFace(face.replace("light", "dark")));
-                    }
+                    dispatch (setFace(face.replace("light", "dark").replace("black", "dark")));
+                }else if(value.includes("black")){
+                    dispatch(setColor("black"));
+                    dispatch (setFace(face.replace("light", "black").replace("dark", "black")));
                 }
 
                 break;

@@ -23,21 +23,50 @@
   },
   "clothes": {
     "files": [
+      "black.png",
+      "blue.png",
       "orange.png",
       "pink.png",
-      "red.png"
+      "purple.png",
+      "red.png",
+      "white.png",
+      "white.png~"
     ]
   },
   "cochlear": {
     "files": [
       "orange.png",
       "purple.png",
-      "red.png"
+      "red.png",
+      "red.png-autosave.kra"
+    ]
+  },
+  "color": {
+    "files": [
+      "blackRound.png",
+      "blackRoundless.png",
+      "blackSkinny.png",
+      "blackSkinnyless.png",
+      "blackSquare.png",
+      "blackSquareless.png",
+      "darkRoundFace.png",
+      "darkRoundless.png",
+      "darkSkinny.png",
+      "darkSkinnyless.png",
+      "darkSquare.png",
+      "darkSquareless.png",
+      "lightRound.png",
+      "lightRoundless.png",
+      "lightSkinny.png",
+      "lightSquare.png",
+      "lightSquareless.png",
+      "skinnyLightless.png"
     ]
   },
   "default": {
     "files": [
-      "default.png"
+      "default.png",
+      "default.png-autosave.kra"
     ]
   },
   "files": [
@@ -80,18 +109,24 @@
   },
   "face": {
     "files": [
+      "blackRound.png",
+      "blackRoundless.png",
+      "blackSkinny.png",
+      "blackSkinnyless.png",
+      "blackSquare.png",
+      "blackSquareless.png",
       "darkRoundFace.png",
-      "lightRoundFace.png",
+      "darkRoundless.png",
       "darkSkinny.png",
-      "lightSkinny.png",
+      "darkSkinnyless.png",
       "darkSquare.png",
-      "lightSquare.png"
-    ]
-  },
-  "color": {
-    "files": [
-      "darkRoundFace.png",
-      "lightRoundFace.png"
+      "darkSquareless.png",
+      "lightRound.png",
+      "lightRoundless.png",
+      "lightSkinny.png",
+      "lightSquare.png",
+      "lightSquareless.png",
+      "skinnyLightless.png"
     ]
   },
   "glasses": {
@@ -118,6 +153,13 @@
       "black4.png",
       "black4R.png",
       "black4S.png",
+      "black5.png",
+      "black5.png~",
+      "black5R.png",
+      "black5R.png~",
+      "black5S.png",
+      "black5S.png~",
+      "black6R.png",
       "blackH1.png",
       "blackH1R.png",
       "blackH1S.png",
@@ -127,6 +169,10 @@
       "blackH3.png",
       "blackH3R.png",
       "blackH3S.png",
+      "blond5.png",
+      "blond5R.png",
+      "blond5S.png",
+      "blond6R.png",
       "blonde1.png",
       "blonde1R.png",
       "blonde1S.png",
@@ -159,6 +205,10 @@
       "brown4.png",
       "brown4R.png",
       "brown4S.png",
+      "brown5.png",
+      "brown5R.png",
+      "brown5S.png",
+      "brown6R.png",
       "brownH1.png",
       "brownH1R.png",
       "brownH1S.png",

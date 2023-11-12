@@ -16,11 +16,15 @@ function Story(){
     },[]);
 
     useEffect(()=>{
+        setFileType("gif");
         if(audio==="On" )
         document.getElementById("voice").play();
     }, [page])
     const [rightDis, setRightDis] = useState(false);
     const [leftDis, setLeftDis] = useState(true);
+    const [fileType, setFileType] = useState("jpg");
+
+
     const handleRightClick = () => {
         if(page < 23) {
             dispatch(setPage(page + 2));
@@ -46,11 +50,23 @@ function Story(){
             setLeftDis(true)
         }
     }
+
+    const showhide = (hide)=>{
+        if(!hide){
+            document.getElementById("jpgstory").style.display = "none";
+            document.getElementById("gifstory").style.display = "block";
+        }
+        else{
+            document.getElementById("jpgstory").style.display = "block";
+            document.getElementById("gifstory").style.display = "none";
+        }
+    }
     return (
         <div>
             <div id={"boxstory"}>
-                {audio==="On" && <audio id={"voice"} src={`../audio/${caption.toLowerCase()}/${page}.mp3`}/>}
-                <img className={"story-image"} src={`../images/story/${page}-${page+1}.jpg`} alt={""}/>
+                {audio==="On" && <audio id={"voice"} src={`../audio/${caption.toLowerCase()}/${page}.mp3`} />}
+                <img className={"story-image"} id={"jpgstory"} src={`../images/story/${page}-${page+1}.jpg`} onLoad={()=>showhide(true)} alt={""}/>
+                <img className={"story-image"}  id={"gifstory"} src={`../images/story/${page}-${page+1}.gif`} onLoad={()=> {showhide(false)}} onError={()=>showhide(true)} alt={""}/>
                 <Caption/>
                 <div id={"button-container"}>
                     <button id={"back-button"}  className={"float-left"} onClick={handleLeftClick}>
