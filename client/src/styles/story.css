@@ -12,7 +12,28 @@
     position: relative;
 }
 
+/* Style for the message container */
+.message-container {
+    max-width: 300px; /* Adjust as needed */
+    margin: 10px;
+    padding: 15px;
+    border-radius: 15px;
+    background-color: #007aff; /* iMessage blue color */
+    position: relative;
+    display: inline-block;
+    color: white; /* Text color */
+}
 
+/* Style for the message tip */
+.message-container::after {
+    content: '';
+    position: absolute;
+    top: 10px;
+    right: -30px;
+    border-width: 20px;
+    border-style: solid;
+    border-color: transparent transparent transparent #007aff; /* Triangle color */
+}
 
 .shadowed{
     border-radius: 1rem;

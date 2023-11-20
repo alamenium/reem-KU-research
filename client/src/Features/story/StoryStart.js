@@ -10,13 +10,12 @@ function StoryStart(){
 
     return (
         <div>
-            <div className={"overlay"}></div>
-            <img className={"shadowed"} src={"../images/story/StartRead.png"} alt={""}/>
+            <img className={"shadowed"} style={{visibility:"hidden"}} src={"../images/story/StartRead.png"} alt={""}/>
             <NavLink
                 exact
                 to={"../story"}
             >
-                <button className={"starbutton"}> Start!</button>
+                <button className={"starbutton"} style={{background: "white", color: "black", textDecoration: "none !important", border: "black 4px solid"}}> Start!</button>
             </NavLink>
 
         </div>

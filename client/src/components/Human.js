@@ -7,14 +7,14 @@ import mouthSRC from "../images/avatar/mouth/closed.png";
 import noseSRC from "../images/avatar/nose/1.png";
 
 import {useSelector} from "react-redux";
-import {useEffect, useState} from "react";
+import React, {useEffect, useState} from "react";
+import story from "../Features/story/Story";
 
-
-function Human(){
+function Human({d_on = false, d_text = ""}){
 
     const { face, hair, eyes,cochlear, clothes, glasses, mouth, nose } = useSelector((state) => state.avatar);
     const [currHair, changeCurrHair] = useState("none");
-
+    const { page , started } = useSelector((state) => state.story);
     useEffect(() => {
             if(face.includes("Round"))
                 changeCurrHair(hair.slice(0, hair.length-4)+"R.png");
@@ -25,7 +25,8 @@ function Human(){
 
     }, [face, hair]);
     return (
-        <div id={"human"}>
+<div >
+        <div id={"human"} style={{position: "relative"}}>
             <img id={"face"} src={face} alt={""}/>
             {hair!=="none" && <img id={"hair"} src={currHair} alt={""}/>}
             {eyes!=="none" && <img id={"eyes"} src={eyes} alt={""}/>}
@@ -34,7 +35,11 @@ function Human(){
             {glasses!=="none" && <img id={"glasses"} src={glasses} alt={""}/>}
             {mouth!=="none" && <img id={"mouth"} src={mouth} alt={""}/>}
             {nose!=="none" && <img id={"nose"} src={nose} alt={""}/>}
+            {d_on && <div style={{position: "relative", left: "-300px", top: "100px"}} className="message-container">
+                {d_text}
+            </div>}
         </div>
+</div>
     );
  }
 

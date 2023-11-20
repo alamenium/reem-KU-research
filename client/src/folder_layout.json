@@ -58,6 +58,7 @@
       "lightRound.png",
       "lightRoundless.png",
       "lightSkinny.png",
+      "lightSkinnyless.png",
       "lightSquare.png",
       "lightSquareless.png",
       "skinnyLightless.png"
@@ -124,9 +125,9 @@
       "lightRound.png",
       "lightRoundless.png",
       "lightSkinny.png",
+      "lightSkinnyless.png",
       "lightSquare.png",
-      "lightSquareless.png",
-      "skinnyLightless.png"
+      "lightSquareless.png"
     ]
   },
   "glasses": {

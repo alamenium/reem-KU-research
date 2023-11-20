@@ -2,7 +2,8 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
-    page: 1
+    page: 1,
+    started: false
 };
 
 const storySlice = createSlice({
