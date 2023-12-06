@@ -5,23 +5,85 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dde5eabf-688a-4c09-918b-9a8ef3ad1ec8" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/client/public/images/avatar/color/lightSkinnyless.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/public/images/avatar/face/lightSkinnyless.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/Features/story/Questions.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/Features/story/StoryStartOld.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/Features/story/text.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/images/avatar/color/lightSkinnyless.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/images/avatar/face/lightSkinnyless.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Archive 2 copy/clotthes/Untitled_Artwork 48.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Archive 2 copy/clotthes/Untitled_Artwork 50.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Archive 2 copy/clotthes/Untitled_Artwork 51.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Archive 2 copy/clotthes/Untitled_Artwork 52.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Archive 2 copy/clotthes/black.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Archive 2 copy/clotthes/blue.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Archive 2 copy/clotthes/purple.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Archive 2 copy/clotthes/white.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Archive 2 copy/new hair adjusted/black10.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Archive 2 copy/new hair adjusted/black5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Archive 2 copy/new hair adjusted/black5R.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Archive 2 copy/new hair adjusted/black5S.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Archive 2 copy/new hair adjusted/black6R.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Archive 2 copy/new hair adjusted/black7.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Archive 2 copy/new hair adjusted/black8.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Archive 2 copy/new hair adjusted/black8.png-autosave.kra" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Archive 2 copy/new hair adjusted/black8R.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Archive 2 copy/new hair adjusted/black8S.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Archive 2 copy/new hair adjusted/black9.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Archive 2 copy/new hair adjusted/blond10.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Archive 2 copy/new hair adjusted/blond5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Archive 2 copy/new hair adjusted/blond5R.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Archive 2 copy/new hair adjusted/blond5S.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Archive 2 copy/new hair adjusted/blond6R.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Archive 2 copy/new hair adjusted/blond7.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Archive 2 copy/new hair adjusted/blond8.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Archive 2 copy/new hair adjusted/blond9.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Archive 2 copy/new hair adjusted/brown10.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Archive 2 copy/new hair adjusted/brown10.png-autosave.kra" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Archive 2 copy/new hair adjusted/brown5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Archive 2 copy/new hair adjusted/brown5R.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Archive 2 copy/new hair adjusted/brown5S.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Archive 2 copy/new hair adjusted/brown6R.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Archive 2 copy/new hair adjusted/brown7.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Archive 2 copy/new hair adjusted/brown7.png-autosave.kra" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Archive 2 copy/new hair adjusted/brown8.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Archive 2 copy/new hair adjusted/brown8R.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Archive 2 copy/new hair adjusted/brown8S.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Archive 2 copy/new hair adjusted/brown9.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Archive 2/clotthes/.Untitled_Artwork 48.png-autosave.kra" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Archive 2/clotthes/.Untitled_Artwork 50.png-autosave.kra" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Archive 2/clotthes/.Untitled_Artwork 51.png-autosave.kra" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Archive 2/clotthes/.Untitled_Artwork 52.png-autosave.kra" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/public/images/avatar/full/.Untitled_Artwork 48.png-autosave.kra" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/public/images/avatar/full/.Untitled_Artwork 50.png-autosave.kra" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/public/images/avatar/full/.Untitled_Artwork 51.png-autosave.kra" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/public/images/avatar/full/.Untitled_Artwork 52.png-autosave.kra" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/public/images/avatar/full/black.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/public/images/avatar/full/blue.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/public/images/avatar/full/purple.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/public/images/avatar/full/white.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/images/avatar/full/.Untitled_Artwork 48.png-autosave.kra" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/images/avatar/full/.Untitled_Artwork 50.png-autosave.kra" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/images/avatar/full/.Untitled_Artwork 51.png-autosave.kra" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/images/avatar/full/.Untitled_Artwork 52.png-autosave.kra" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/images/avatar/full/black.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/images/avatar/full/blue.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/images/avatar/full/purple.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/images/avatar/full/white.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/images/avatar/face/skinnyLightless.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/images/bg-white.png" beforeDir="false" afterPath="$PROJECT_DIR$/client/public/images/bg-white.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/Features/story/Story.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/Features/story/Story.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/Features/story/StoryStart.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/Features/story/StoryStart.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/Features/story/storySlice.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/Features/story/storySlice.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Archive 2/clotthes/Untitled_Artwork 48.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Archive 2/clotthes/Untitled_Artwork 50.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Archive 2/clotthes/Untitled_Artwork 51.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Archive 2/clotthes/Untitled_Artwork 52.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Archive 2/clotthes/black.png" beforeDir="false" afterPath="$PROJECT_DIR$/Archive 2/clotthes/black.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Archive 2/clotthes/blue.png" beforeDir="false" afterPath="$PROJECT_DIR$/Archive 2/clotthes/blue.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Archive 2/clotthes/purple.png" beforeDir="false" afterPath="$PROJECT_DIR$/Archive 2/clotthes/purple.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Archive 2/clotthes/white.png" beforeDir="false" afterPath="$PROJECT_DIR$/Archive 2/clotthes/white.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/public/images/avatar/clothes/black.png" beforeDir="false" afterPath="$PROJECT_DIR$/client/public/images/avatar/clothes/black.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/public/images/avatar/clothes/blue.png" beforeDir="false" afterPath="$PROJECT_DIR$/client/public/images/avatar/clothes/blue.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/public/images/avatar/clothes/purple.png" beforeDir="false" afterPath="$PROJECT_DIR$/client/public/images/avatar/clothes/purple.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/public/images/avatar/clothes/white.png" beforeDir="false" afterPath="$PROJECT_DIR$/client/public/images/avatar/clothes/white.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/Features/avatar/DisplayOptions.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/Features/avatar/DisplayOptions.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/components/Human.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Human.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/folder_layout.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/folder_layout.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/images/avatar/face/skinnyLightless.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/styles/story.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/styles/story.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/images/avatar/clothes/black.png" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/images/avatar/clothes/black.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/images/avatar/clothes/blue.png" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/images/avatar/clothes/blue.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/images/avatar/clothes/purple.png" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/images/avatar/clothes/purple.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/images/avatar/clothes/white.png" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/images/avatar/clothes/white.png" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,11 +130,13 @@
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/Users/USER/WebstormProjects/reem-research-main/client/src/Features/story",
+    "last_opened_file_path": "/Users/alamenium/Desktop/Projects/gcloud-test/reem-KU-research",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.standard": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.standard": "",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_interpreter_path": "node",
     "nodejs_package_manager_path": "npm",
@@ -142,11 +206,24 @@
       <workItem from="1699726508707" duration="5991000" />
       <workItem from="1700299254747" duration="462000" />
       <workItem from="1700502712407" duration="8790000" />
+      <workItem from="1700558753444" duration="1456000" />
+      <workItem from="1701765045141" duration="1731000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />

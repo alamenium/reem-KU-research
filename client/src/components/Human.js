@@ -35,7 +35,7 @@ function Human({d_on = false, d_text = ""}){
             {glasses!=="none" && <img id={"glasses"} src={glasses} alt={""}/>}
             {mouth!=="none" && <img id={"mouth"} src={mouth} alt={""}/>}
             {nose!=="none" && <img id={"nose"} src={nose} alt={""}/>}
-            {d_on && <div style={{position: "relative", left: "-300px", top: "100px"}} className="message-container">
+            {d_on && <div style={{position: "relative", left: "-300px", top: "100px", fontSize: "1.5rem"}} className="message-container">
                 {d_text}
             </div>}
         </div>

@@ -1,4 +1,8 @@
 {
+  "files": [
+    ".DS_Store",
+    "defaultBlank.png"
+  ],
   "backHead": {
     "files": [
       "black1B.png",
@@ -70,9 +74,6 @@
       "default.png-autosave.kra"
     ]
   },
-  "files": [
-    "defaultBlank.png"
-  ],
   "eyebrows": {
     "files": [
       "1.png",
@@ -130,6 +131,19 @@
       "lightSquareless.png"
     ]
   },
+  "full": {
+    "files": [
+      ".DS_Store",
+      ".Untitled_Artwork 48.png-autosave.kra",
+      ".Untitled_Artwork 50.png-autosave.kra",
+      ".Untitled_Artwork 51.png-autosave.kra",
+      ".Untitled_Artwork 52.png-autosave.kra",
+      "black.png",
+      "blue.png",
+      "purple.png",
+      "white.png"
+    ]
+  },
   "glasses": {
     "files": [
       "blue.png",
@@ -142,11 +156,12 @@
   },
   "hair": {
     "files": [
+      ".DS_Store",
+      "Black2R.png",
       "black1.png",
       "black1R.png",
       "black1S.png",
       "black2.png",
-      "Black2R.png",
       "black2S.png",
       "black3.png",
       "black3R.png",
