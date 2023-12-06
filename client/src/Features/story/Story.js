@@ -7,13 +7,14 @@ import {setPage} from "./storySlice";
 import {useDispatch, useSelector} from "react-redux";
 import Caption from "./Captions"
 import {NavLink} from "react-router-dom";
-import {afterReading, beforeReading} from "./Questions";
+import {afterReadingE, beforeReadingE, afterReadingA, beforeReadingA} from "./Questions";
 
 function Story(){
-    const {audio, caption, animation, avatar} = useSelector((state) => state.settings);
+    const {audio, caption, animation, avatar, } = useSelector((state) => state.settings);
     const dispatch = useDispatch();
     const {page} = useSelector((state) => state.story);
-
+    const beforeReading = (caption === "English")? beforeReadingE: beforeReadingA;
+    const afterReading = (caption === "English")? afterReadingE: afterReadingA;
     useEffect(() => {
         document.querySelector("body").style.backgroundImage = "url('../images/bg-white.png')";
     },[]);
@@ -29,7 +30,7 @@ function Story(){
     const [dia_index, setDia_index] = useState(0);
 
     const handleRightClick = () => {
-        if(dia_index < (afterReading[(page-1)/2].length + beforeReading[(page-1)/2].length)){
+        if((dia_index < (afterReading[(page-1)/2].length + beforeReading[(page-1)/2].length))&& avatar==="On"){
             setDia_index(dia_index+1);
         }
         else {
@@ -47,7 +48,7 @@ function Story(){
     }
     const handleLeftClick = () => {
 
-        if(dia_index > 0){
+        if(dia_index > 0&& avatar==="On"){
             setDia_index(dia_index-1);
         }
         else{
@@ -78,19 +79,21 @@ function Story(){
             <div id={"boxstory"}>
                 {audio==="On" && <audio id={"voice"} src={`../audio/${caption.toLowerCase()}/${page}.mp3`} />}
                 <img className={"story-image"} id={"jpgstory"} src={`../images/story/${page}-${page+1}.jpg`} onLoad={()=>showhide(true)} alt={""}/>
-                <img className={"story-image"}  id={"gifstory"} src={`../images/story/${page}-${page+1}.gif`} onLoad={()=> {showhide(false)}} onError={()=>showhide(true)} alt={""}/>
-                { (dia_index >= beforeReading[(page-1)/2].length) && <Caption/>}
+                {animation === "On" && <img className={"story-image"} id={"gifstory"} src={`../images/story/${page}-${page + 1}.gif`}
+                      onLoad={() => {
+                          showhide(false)
+                      }} onError={() => showhide(true)} alt={""}/>}
+                {animation === "Off" && <span id={"gifstory"}></span>}
+                {((dia_index >= beforeReading[(page-1)/2].length)||avatar==="Off") && <Caption/>}
                 <div id={"button-container"}>
                     <button id={"back-button"}  className={"float-left"} onClick={handleLeftClick}>
-                    <img src={"../images/button.webp"}/>
-                </button>
+                       <img src={"../images/button.webp"}/>
+                    </button>
                     {leftDis&&<div className={"btn-disabled float-left left-dis"}></div>}
 
                     <button id={"right-button"} className={"float-right"} onClick={handleRightClick}>
-
                         <img src={"../images/button.webp"}/>
-                </button>
-
+                    </button>
                     {rightDis&&<div className={"btn-disabled float-right right-dis"}></div>}
 
                 </div>
@@ -103,7 +106,7 @@ function Story(){
             </NavLink>}
 
             {avatar==="On" &&<div>
-                <Human d_on={dia_index !== beforeReading[(page-1)/2].length} d_text = {dia_index < beforeReading[(page-1)/2].length? beforeReading[(page-1)/2][dia_index]: dia_index === beforeReading[(page-1)/2].length? " ": afterReading[(page-1)/2][dia_index - 1 - beforeReading[(page-1)/2].length]} />
+                <Human full={true} d_on={dia_index !== beforeReading[(page-1)/2].length} d_text = {dia_index < beforeReading[(page-1)/2].length? beforeReading[(page-1)/2][dia_index]: dia_index === beforeReading[(page-1)/2].length? " ": afterReading[(page-1)/2][dia_index - 1 - beforeReading[(page-1)/2].length]} />
             </div>}
 
         </div>

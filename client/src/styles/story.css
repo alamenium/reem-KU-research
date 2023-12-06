@@ -69,6 +69,7 @@
     right: 100px;
 }
 #back-button{
+    z-index: 10000;
     border: none;
     background-color: transparent;
 }
@@ -84,6 +85,7 @@
 
 #right-button{
 
+    z-index: 10000;
     border: none;
     background-color: transparent;
 }

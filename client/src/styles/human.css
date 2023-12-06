@@ -3,7 +3,8 @@
     display: flex;
     justify-content: center;
     position: relative;
-    top: -2rem;
+    top: -5rem;
+    z-index: -1000;
 }
 
 #face{
@@ -19,6 +20,11 @@
 #cochlear{
     top: -21px;
 }
+#fullclothes{
+    top: 122px;
+    scale: 0.8;
+}
+
 
 
 #hair{

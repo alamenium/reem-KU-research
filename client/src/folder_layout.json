@@ -1,10 +1,7 @@
 {
-  "files": [
-    ".DS_Store",
-    "defaultBlank.png"
-  ],
   "backHead": {
     "files": [
+      ".black3B.png-autosave.kra",
       "black1B.png",
       "black2B.png",
       "black3B.png",
@@ -33,8 +30,7 @@
       "pink.png",
       "purple.png",
       "red.png",
-      "white.png",
-      "white.png~"
+      "white.png"
     ]
   },
   "cochlear": {
@@ -74,6 +70,9 @@
       "default.png-autosave.kra"
     ]
   },
+  "files": [
+    "defaultBlank.png"
+  ],
   "eyebrows": {
     "files": [
       "1.png",
@@ -133,7 +132,6 @@
   },
   "full": {
     "files": [
-      ".DS_Store",
       ".Untitled_Artwork 48.png-autosave.kra",
       ".Untitled_Artwork 50.png-autosave.kra",
       ".Untitled_Artwork 51.png-autosave.kra",
@@ -156,12 +154,12 @@
   },
   "hair": {
     "files": [
-      ".DS_Store",
-      "Black2R.png",
       "black1.png",
+      "black10.png",
       "black1R.png",
       "black1S.png",
       "black2.png",
+      "Black2R.png",
       "black2S.png",
       "black3.png",
       "black3R.png",
@@ -170,12 +168,16 @@
       "black4R.png",
       "black4S.png",
       "black5.png",
-      "black5.png~",
       "black5R.png",
-      "black5R.png~",
       "black5S.png",
-      "black5S.png~",
+      "black6.png",
       "black6R.png",
+      "black6S.png",
+      "black7.png",
+      "black8.png",
+      "black8R.png",
+      "black8S.png",
+      "black9.png",
       "blackH1.png",
       "blackH1R.png",
       "blackH1S.png",
@@ -185,10 +187,14 @@
       "blackH3.png",
       "blackH3R.png",
       "blackH3S.png",
+      "blond10.png",
       "blond5.png",
       "blond5R.png",
       "blond5S.png",
       "blond6R.png",
+      "blond7.png",
+      "blond8.png",
+      "blond9.png",
       "blonde1.png",
       "blonde1R.png",
       "blonde1S.png",
@@ -210,6 +216,7 @@
       "blondeH3R.png",
       "blondeH3S.png",
       "brown1.png",
+      "brown10.png",
       "brown1R.png",
       "brown1S.png",
       "brown2.png",
@@ -224,7 +231,14 @@
       "brown5.png",
       "brown5R.png",
       "brown5S.png",
+      "brown6.png",
       "brown6R.png",
+      "brown6S.png",
+      "brown7.png",
+      "brown8.png",
+      "brown8R.png",
+      "brown8S.png",
+      "brown9.png",
       "brownH1.png",
       "brownH1R.png",
       "brownH1S.png",
