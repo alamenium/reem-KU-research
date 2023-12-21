@@ -12,6 +12,12 @@
     font-weight: bold;
 }
 
+.form{
+    position: relative;
+    bottom: 600px;
+    scale: 1.5;
+}
+
 .newStudent{
     margin-top: 3rem;
 }
@@ -19,8 +25,7 @@
 body{
     margin: 0;
     padding: 0;
-    background-color: #fcf16c !important;
-    background-image: url("../images/bg.png");
+    background-color: white;
     background-size: cover;
 }
 

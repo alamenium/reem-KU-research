@@ -9,7 +9,7 @@ import SkinColorSelector from '../../temp_trash/SkinColorSelector';
 import avatarCSS from '../../styles/avatar.css';
 import DisplayOptions from "./DisplayOptions";
 import Human from "../../components/Human";
-import white_bg from "../../images/bg-white.png";
+import white_bg from "../../images/img.png";
 import {NavLink} from "react-router-dom";
 function Avatar() {
     document.querySelector("body").style.backgroundImage = `url(${white_bg})`;

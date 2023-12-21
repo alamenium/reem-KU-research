@@ -106,7 +106,7 @@ function Story(){
             </NavLink>}
 
             {avatar==="On" &&<div>
-                <Human full={true} d_on={dia_index !== beforeReading[(page-1)/2].length} d_text = {dia_index < beforeReading[(page-1)/2].length? beforeReading[(page-1)/2][dia_index]: dia_index === beforeReading[(page-1)/2].length? " ": afterReading[(page-1)/2][dia_index - 1 - beforeReading[(page-1)/2].length]} />
+                <Human back={dia_index%3==0} full={true} d_on={dia_index !== beforeReading[(page-1)/2].length} d_text = {dia_index < beforeReading[(page-1)/2].length? beforeReading[(page-1)/2][dia_index]: dia_index === beforeReading[(page-1)/2].length? " ": afterReading[(page-1)/2][dia_index - 1 - beforeReading[(page-1)/2].length]} />
             </div>}
 
         </div>

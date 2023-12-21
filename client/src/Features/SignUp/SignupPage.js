@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../../util/authContext';
 import '../../styles/Homepage.css';
-import FrontPG from '../../images/frontPg.png';
+import FrontPG from '../../images/document_6.png';
 import "../../Fonts/stylesheet.css"
 import newstudent from '../../images/newstudent.png'
 import kids from "../../images/kids.png"
@@ -37,9 +37,9 @@ function SignupPage() {
         const { username, password } = formState;
         if (password.length < 8) {
             alert('Password must have at least 8 characters.');
-        } else if (username.length < 6) {
+        } else if (username.length < 3) {
             alert('Username must contain at least 6 characters.');
-        } else if (username.length > 16) {
+        } else if (username.length > 64) {
             alert('Username must not contain more than 16 characters.');
         } else {
             setIsPending(true);
@@ -59,11 +59,10 @@ function SignupPage() {
         <div className="container">
             {/*<header className="header">*/}
             {/*    <h1 className="gradient-text">The New Student</h1>*/}
-            {/*</header>*/}
-            <img className={"newStudent"} src={newstudent} alt={"new student"}/>
-            <img className={"kids"} src={kids} alt={"new student"}/>
+            {/*/!*</header>*!/*/}
+            {/*<img className={"kids"} src={kids} alt={"new student"}/>*/}
             <div className="image-container">
-                <img width={600} height={600} src={FrontPG} alt="Front Page" />
+                <img width={1100} height={1100} src={FrontPG} alt="Front Page" />
             </div>
             {isPending && <div className="loadingText">Loading...</div>}
             <form className="form">

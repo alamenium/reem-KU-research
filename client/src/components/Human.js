@@ -10,7 +10,7 @@ import {useSelector} from "react-redux";
 import React, {useEffect, useState} from "react";
 import story from "../Features/story/Story";
 
-function Human({d_on = false, d_text = "", full = false, back = true}){
+function Human({d_on = false, d_text = "", full = false, back = false}){
 
     const { face, hair, eyes,cochlear, clothes, glasses, mouth, nose } = useSelector((state) => state.avatar);
     const [currHair, changeCurrHair] = useState("none");
@@ -32,16 +32,23 @@ function Human({d_on = false, d_text = "", full = false, back = true}){
     return (
 <div >
         <div id={"human"} style={{position: "relative"}}>
-            <img id={"face"} src={face} alt={""}/>
-            {hair!=="none" && <img id={"hair"} src={currHair.replace("hair", "backHead").replace(".png", "B.png").replace("RB", "B").replace("BB", "B")} alt={""}/>}
+            {back === false && <img id={"face"} src={face} alt={""}/>}
+            {back === true && <img id={"face"} src={`../images/avatar/backface/${face.includes("light")?"light": face.includes("dark")?"dark":"black"}.png`} alt={""}/>}
+
+            {hair!=="none" && back === true &&  <img id={"hair"} src={currHair.replace("hair", "backHead").replace(".png", "B.png").replace("RB", "B").replace("BB", "B")} alt={""}/>}
+            {hair!=="none" && back === false && !currHair.includes("6") &&  !currHair.includes("5") && <img id={"hair"} src={currHair} alt={""}/>}
+            {hair!=="none" && back === false && (currHair.includes("6") || currHair.includes("5")) && <img id={"hairoffset"} src={currHair} alt={""}/>}
             {eyes!=="none" && <img id={"eyes"} src={eyes} alt={""}/>}
             { (cochlear!=="none" && !back) && <img id={"cochlear"} src={cochlear} alt={""}/>}
             {clothes!=="none" && !full && <img id={"clothes"} src={clothes} alt={""}/>}
             {clothes!=="none" && full &&  <img id={"fullclothes"} src={clothes.replace("clothes", "full")} alt={""}/>}
             {glasses!=="none" && !back &&<img id={"glasses"} src={glasses} alt={""}/>}
-            {mouth!=="none" && !back &&<img id={"mouth"} src={mouth} alt={""}/>}
+             {mouth!=="none" && !back &&<img id={"mouth"} src={mouth} alt={""}/>}
             {nose!=="none" &&!back && <img id={"nose"} src={nose} alt={""}/>}
-            {d_on && <div style={{position: "relative", left: "-300px", top: "100px", fontSize: "1.5rem"}} className="message-container">
+            {d_on && back === false &&<div style={{position: "relative", left: "-300px", top: "100px", fontSize: "1.5rem"}} className="message-container l">
+                {d_text}
+            </div>}
+            {d_on && back === true &&<div style={{position: "relative", right: "-300px", top: "100px", fontSize: "1.5rem"}} className="message-container r">
                 {d_text}
             </div>}
         </div>

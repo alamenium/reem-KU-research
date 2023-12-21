@@ -17,42 +17,47 @@ import store from './store'; // Import your Redux store
 function App() {
     return (
         // Wrap your entire application with the Provider component
-        <Provider store={store}>
-            <ProvideAuth>
-                <Router>
-                    <Routes>
-                        <Route path="/" element={<SignupPage />} />
-                        <Route path="/settings" element={<Settings />} />
-                        <Route
-                            path="/protected/example"
-                            element={
-                                <ProtectedRoute>
-                                    <ProtectedExamplePage />
-                                </ProtectedRoute>
-                            }
-                        />
-                        <Route
-                            path="/avatar"
-                            element={
-                                    <Avatar />
-                            }
-                        />
-                        <Route
-                            path="/storystart"
-                            element={
-                                <StoryStart />
-                            }
-                        />
-                        <Route
-                            path="/story"
-                            element={
-                                <Story />
-                            }
-                        />
-                    </Routes>
-                </Router>
-            </ProvideAuth>
-        </Provider>
+        <div>
+                <Provider store={store}>
+
+                    <ProvideAuth>
+                        <Router>
+                            <Routes>
+                                <Route path="/" element={<SignupPage />} />
+                                <Route path="/settings" element={<Settings />} />
+                                <Route
+                                    path="/protected/example"
+                                    element={
+                                        <ProtectedRoute>
+                                            <ProtectedExamplePage />
+                                        </ProtectedRoute>
+                                    }
+                                />
+                                <Route
+                                    path="/avatar"
+                                    element={
+                                        <Avatar />
+                                    }
+                                />
+                                <Route
+                                    path="/storystart"
+                                    element={
+                                        <StoryStart />
+                                    }
+                                />
+                                <Route
+                                    path="/story"
+                                    element={
+                                        <Story />
+                                    }
+                                />
+                            </Routes>
+                        </Router>
+                    </ProvideAuth>
+                </Provider>
+
+        </div>
+
     );
 }
 
