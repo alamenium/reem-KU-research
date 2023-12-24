@@ -6,14 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="dde5eabf-688a-4c09-918b-9a8ef3ad1ec8" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/Features/settings/Settings.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/Features/settings/Settings.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/Features/settings/settingsSlice.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/Features/settings/settingsSlice.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/Features/story/Story.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/Features/story/Story.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/Human.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Human.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/folder_layout.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/folder_layout.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/images/avatar/cochlear/red.png-autosave.kra" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/images/avatar/hair/blond6.png-autosave.kra" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/images/avatar/hair/blond6R.png-autosave.kra" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/Features/story/StoryStart.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/Features/story/StoryStart.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -142,7 +135,7 @@
       <workItem from="1702127691333" duration="62000" />
       <workItem from="1702469377867" duration="1968000" />
       <workItem from="1703097655728" duration="7014000" />
-      <workItem from="1703416608552" duration="3510000" />
+      <workItem from="1703416608552" duration="4330000" />
     </task>
     <servers />
   </component>
