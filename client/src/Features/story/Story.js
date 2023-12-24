@@ -10,7 +10,7 @@ import {NavLink} from "react-router-dom";
 import {afterReadingE, beforeReadingE, afterReadingA, beforeReadingA} from "./Questions";
 
 function Story(){
-    const {audio, caption, animation, avatar, } = useSelector((state) => state.settings);
+    const {audio, caption, animation, avatar, cap} = useSelector((state) => state.settings);
     const dispatch = useDispatch();
     const {page} = useSelector((state) => state.story);
     const beforeReading = (caption === "English")? beforeReadingE: beforeReadingA;
@@ -21,7 +21,7 @@ function Story(){
 
     useEffect(()=>{
         setFileType("gif");
-        if(audio==="On" )
+        if(audio==="On")
         document.getElementById("voice").play();
     }, [page])
     const [rightDis, setRightDis] = useState(false);
@@ -77,14 +77,14 @@ function Story(){
     return (
         <div>
             <div id={"boxstory"}>
-                {audio==="On" && <audio id={"voice"} src={`../audio/${caption.toLowerCase()}/${page}.mp3`} />}
+                {audio==="On"  && <audio id={"voice"} src={`../audio/${caption.toLowerCase()}/${page}.mp3`} />}
                 <img className={"story-image"} id={"jpgstory"} src={`../images/story/${page}-${page+1}.jpg`} onLoad={()=>showhide(true)} alt={""}/>
                 {animation === "On" && <img className={"story-image"} id={"gifstory"} src={`../images/story/${page}-${page + 1}.gif`}
                       onLoad={() => {
                           showhide(false)
                       }} onError={() => showhide(true)} alt={""}/>}
                 {animation === "Off" && <span id={"gifstory"}></span>}
-                {((dia_index >= beforeReading[(page-1)/2].length)||avatar==="Off") && <Caption/>}
+                {((dia_index >= beforeReading[(page-1)/2].length)||avatar==="Off") && cap === 'On' &&<Caption/>}
                 <div id={"button-container"}>
                     <button id={"back-button"}  className={"float-left"} onClick={handleLeftClick}>
                        <img src={"../images/button.webp"}/>

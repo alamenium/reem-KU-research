@@ -6,6 +6,7 @@ const initialState = {
     caption: 'Arabic',
     animation: 'Off',
     avatar: 'Off',
+    cap: 'On'
 };
 
 const settingsSlice = createSlice({
@@ -14,6 +15,9 @@ const settingsSlice = createSlice({
     reducers: {
         setAudio(state, action) {
             state.audio = action.payload;
+        },
+        setText(state, action) {
+            state.cap = action.payload;
         },
         setCaption(state, action) {
             state.caption = action.payload;
@@ -27,5 +31,5 @@ const settingsSlice = createSlice({
     },
 });
 
-export const { setAudio, setCaption, setAnimation, setAvatar } = settingsSlice.actions;
+export const { setAudio, setText, setCaption, setAnimation, setAvatar } = settingsSlice.actions;
 export default settingsSlice.reducer;

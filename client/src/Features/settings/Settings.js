@@ -2,9 +2,11 @@ import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import {
     setAudio,
+    setText as setCap,
     setCaption,
     setAnimation,
     setAvatar,
+
 } from './settingsSlice'; // Import your Redux actions
 import Button from 'react-bootstrap/Button';
 import { NavLink } from 'react-router-dom';
@@ -13,7 +15,7 @@ import gearImage from '../../images/gear.png';
 
 function Settings() {
     const dispatch = useDispatch();
-    const { audio, caption, animation, avatar } = useSelector(
+    const {cap, audio, caption, animation, avatar } = useSelector(
         (state) => state.settings
     );
 
@@ -21,12 +23,19 @@ function Settings() {
     const [link, setLink] = useState('../storystart');
     const [text, setText] = useState('Story');
 
+
     const audioOn = () => {
         dispatch(setAudio('On'));
     };
 
     const audioOff = () => {
         dispatch(setAudio('Off'));
+    };
+    const textOn = () => {
+        dispatch(setCap("On"));
+    };
+    const textOff = () => {
+        dispatch(setCap('Off'));
     };
 
     const english = () => {
@@ -153,6 +162,27 @@ function Settings() {
                     Off
                 </Button>
             </div>
+            <div className="settings-group">
+                <h5>Text</h5>
+                <Button
+                    variant="secondary"
+                    onClick={textOn}
+                    className={`${
+                        cap === 'On' ? 'active-button' : 'inactive-button'
+                    }`}
+                >
+                    On
+                </Button>
+                <Button
+                    variant="secondary"
+                    onClick={textOff}
+                    className={`${
+                        cap === 'Off' ? 'active-button' : 'inactive-button'
+                    }`}
+                >
+                    Off
+                </Button>
+            </div>
             <div className="settings-info">
                 <div className="default-settings">
                     <h5>Default</h5>
@@ -161,6 +191,7 @@ function Settings() {
                         <div>Caption: Arabic</div>
                         <div>Animation: Off</div>
                         <div>Avatar: Off</div>
+                        <div>Text: On</div>
                     </p>
                 </div>
                 <div className="current-settings">
@@ -170,6 +201,7 @@ function Settings() {
                         <div>Caption: {caption}</div>
                         <div>Animation: {animation}</div>
                         <div>Avatar: {avatar}</div>
+                        <div>Text: {cap}</div>
                     </p>
                 </div>
             </div>

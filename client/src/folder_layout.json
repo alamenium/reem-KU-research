@@ -1,15 +1,12 @@
 {
-  "backface": {
-    "files": [
-      "black.png",
-      "dark.png",
-      "light.png"
-    ]
-  },
+  "files": [
+    ".DS_Store",
+    "defaultBlank.png",
+    "glasses.png"
+  ],
   "backHead": {
     "files": [
       ".black3B.png-autosave.kra",
-      ".DS_Store",
       "black10B.PNG",
       "black10B.PNG~",
       "black1B.png",
@@ -108,6 +105,13 @@
       "purpleB.png~"
     ]
   },
+  "backface": {
+    "files": [
+      "black.png",
+      "dark.png",
+      "light.png"
+    ]
+  },
   "clothes": {
     "files": [
       "black.png",
@@ -123,8 +127,7 @@
     "files": [
       "orange.png",
       "purple.png",
-      "red.png",
-      "red.png-autosave.kra"
+      "red.png"
     ]
   },
   "color": {
@@ -157,10 +160,6 @@
       "default.png~"
     ]
   },
-  "files": [
-    "defaultBlank.png",
-    "glasses.png"
-  ],
   "eyebrows": {
     "files": [
       "1.png",
@@ -220,10 +219,17 @@
   },
   "full": {
     "files": [
+      ".DS_Store",
       ".Untitled_Artwork 48.png-autosave.kra",
       ".Untitled_Artwork 50.png-autosave.kra",
       ".Untitled_Artwork 51.png-autosave.kra",
       ".Untitled_Artwork 52.png-autosave.kra",
+      "Untitled_Artwork 50 copy 3.png",
+      "Untitled_Artwork 50 copy 3.png~",
+      "Untitled_Artwork 50 copy 4.png",
+      "Untitled_Artwork 50 copy 4.png~",
+      "Untitled_Artwork 50 copy 5.png",
+      "Untitled_Artwork 50 copy 5.png~",
       "black.png",
       "black.png~",
       "blue.png",
@@ -233,12 +239,6 @@
       "purple.png",
       "purple.png~",
       "red.png",
-      "Untitled_Artwork 50 copy 3.png",
-      "Untitled_Artwork 50 copy 3.png~",
-      "Untitled_Artwork 50 copy 4.png",
-      "Untitled_Artwork 50 copy 4.png~",
-      "Untitled_Artwork 50 copy 5.png",
-      "Untitled_Artwork 50 copy 5.png~",
       "white.png",
       "white.png~"
     ]
@@ -255,12 +255,15 @@
   },
   "hair": {
     "files": [
+      ".DS_Store",
+      "Black2R.png",
       "black1.png",
       "black10.png",
+      "black10R.png",
+      "black10S.png",
       "black1R.png",
       "black1S.png",
       "black2.png",
-      "Black2R.png",
       "black2S.png",
       "black3.png",
       "black3R.png",
@@ -281,6 +284,8 @@
       "black8R.png",
       "black8S.png",
       "black9.png",
+      "black9R.png",
+      "black9S.png",
       "blackH1.png",
       "blackH1R.png",
       "blackH1S.png",
@@ -291,17 +296,23 @@
       "blackH3R.png",
       "blackH3S.png",
       "blond10.png",
+      "blond10R.png",
+      "blond10S.png",
       "blond5.png",
       "blond5R.png",
       "blond5S.png",
       "blond6.png",
-      "blond6.png-autosave.kra",
       "blond6R.png",
-      "blond6R.png-autosave.kra",
       "blond6S.png",
       "blond7.png",
+      "blond7R.png",
+      "blond7S.png",
       "blond8.png",
+      "blond8R.png",
+      "blond8S.png",
       "blond9.png",
+      "blond9R.png",
+      "blond9S.png",
       "blonde1.png",
       "blonde1R.png",
       "blonde1S.png",
@@ -324,6 +335,8 @@
       "blondeH3S.png",
       "brown1.png",
       "brown10.png",
+      "brown10R.png",
+      "brown10S.png",
       "brown1R.png",
       "brown1S.png",
       "brown2.png",
@@ -342,10 +355,14 @@
       "brown6R.png",
       "brown6S.png",
       "brown7.png",
+      "brown7R.png",
+      "brown7S.png",
       "brown8.png",
       "brown8R.png",
       "brown8S.png",
       "brown9.png",
+      "brown9R.png",
+      "brown9S.png",
       "brownH1.png",
       "brownH1R.png",
       "brownH1S.png",

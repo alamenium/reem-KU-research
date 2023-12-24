@@ -38,7 +38,7 @@ function Human({d_on = false, d_text = "", full = false, back = false}){
             {hair!=="none" && back === true &&  <img id={"hair"} src={currHair.replace("hair", "backHead").replace(".png", "B.png").replace("RB", "B").replace("BB", "B")} alt={""}/>}
             {hair!=="none" && back === false && !currHair.includes("6") &&  !currHair.includes("5") && <img id={"hair"} src={currHair} alt={""}/>}
             {hair!=="none" && back === false && (currHair.includes("6") || currHair.includes("5")) && <img id={"hairoffset"} src={currHair} alt={""}/>}
-            {eyes!=="none" && <img id={"eyes"} src={eyes} alt={""}/>}
+            {eyes!=="none" && back === false&& <img id={"eyes"} src={eyes} alt={""}/>}
             { (cochlear!=="none" && !back) && <img id={"cochlear"} src={cochlear} alt={""}/>}
             {clothes!=="none" && !full && <img id={"clothes"} src={clothes} alt={""}/>}
             {clothes!=="none" && full &&  <img id={"fullclothes"} src={clothes.replace("clothes", "full")} alt={""}/>}

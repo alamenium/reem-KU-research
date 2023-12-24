@@ -5,179 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dde5eabf-688a-4c09-918b-9a8ef3ad1ec8" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/client/public/images/avatar/backHead/black5B.png-autosave.kra" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/public/images/avatar/backHead/blond5B.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/public/images/avatar/backHead/blond6B.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/public/images/avatar/backHead/blond7B.PNG-autosave.kra" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/public/images/avatar/backHead/blond8B.PNG-autosave.kra" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/public/images/avatar/backHead/blond9B.PNG-autosave.kra" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/public/images/avatar/backHead/blonde2B.png-autosave.kra" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/public/images/avatar/backHead/brown10B.PNG-autosave.kra" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/public/images/avatar/backHead/brown2B.png-autosave.kra" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/public/images/avatar/backHead/brown7B.PNG-autosave.kra" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/public/images/avatar/backHead/brown8B.png-autosave.kra" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/public/images/avatar/backHead/brown9B.PNG-autosave.kra" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/public/images/avatar/backface/black.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/public/images/avatar/backface/dark.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/public/images/avatar/backface/light.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/public/images/avatar/full/orange.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/public/images/avatar/full/pink.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/public/images/avatar/full/red.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/public/images/avatar/glasses.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/public/images/avatar/hair/black10R.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/public/images/avatar/hair/black10S.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/public/images/avatar/hair/black7R.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/public/images/avatar/hair/black7S.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/public/images/avatar/hair/black9R.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/public/images/avatar/hair/black9S.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/public/images/avatar/hair/blond10R.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/public/images/avatar/hair/blond10S.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/public/images/avatar/hair/blond6.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/public/images/avatar/hair/blond6.png-autosave.kra" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/public/images/avatar/hair/blond6R.png-autosave.kra" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/public/images/avatar/hair/blond6S.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/public/images/avatar/hair/blond7R.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/public/images/avatar/hair/blond7S.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/public/images/avatar/hair/blond8R.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/public/images/avatar/hair/blond8S.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/public/images/avatar/hair/blond9R.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/public/images/avatar/hair/blond9S.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/public/images/avatar/hair/brown10R.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/public/images/avatar/hair/brown10S.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/public/images/avatar/hair/brown7R.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/public/images/avatar/hair/brown7S.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/public/images/avatar/hair/brown9R.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/public/images/avatar/hair/brown9S.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/images/avatar/backHead/black10B.PNG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/images/avatar/backHead/black5B.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/images/avatar/backHead/black5B.png-autosave.kra" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/images/avatar/backHead/black6B.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/images/avatar/backHead/black7B.PNG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/images/avatar/backHead/black8B.PNG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/images/avatar/backHead/black9B.PNG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/images/avatar/backHead/black9B.PNG-autosave.kra" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/images/avatar/backHead/blackH1B.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/images/avatar/backHead/blackH2B.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/images/avatar/backHead/blackH3B.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/images/avatar/backHead/blackHd1B.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/images/avatar/backHead/blond10B.PNG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/images/avatar/backHead/blond5B.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/images/avatar/backHead/blond6B.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/images/avatar/backHead/blond7B.PNG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/images/avatar/backHead/blond7B.PNG-autosave.kra" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/images/avatar/backHead/blond8B.PNG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/images/avatar/backHead/blond8B.PNG-autosave.kra" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/images/avatar/backHead/blond9B.PNG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/images/avatar/backHead/blond9B.PNG-autosave.kra" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/images/avatar/backHead/blonde2B.png-autosave.kra" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/images/avatar/backHead/blondeH1B.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/images/avatar/backHead/blondeH2B.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/images/avatar/backHead/blondeH3B.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/images/avatar/backHead/brown10B.PNG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/images/avatar/backHead/brown10B.PNG-autosave.kra" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/images/avatar/backHead/brown2B.png-autosave.kra" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/images/avatar/backHead/brown5B.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/images/avatar/backHead/brown6B.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/images/avatar/backHead/brown7B.PNG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/images/avatar/backHead/brown7B.PNG-autosave.kra" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/images/avatar/backHead/brown8B.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/images/avatar/backHead/brown8B.png-autosave.kra" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/images/avatar/backHead/brown9B.PNG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/images/avatar/backHead/brown9B.PNG-autosave.kra" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/images/avatar/backHead/brownH1B.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/images/avatar/backHead/brownH2B.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/images/avatar/backHead/brownH3B.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/images/avatar/backHead/purpleB.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/images/avatar/backface/black.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/images/avatar/backface/dark.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/images/avatar/backface/light.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/images/avatar/full/Untitled_Artwork 50 copy 3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/images/avatar/full/Untitled_Artwork 50 copy 4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/images/avatar/full/Untitled_Artwork 50 copy 5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/images/avatar/full/orange.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/images/avatar/full/pink.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/images/avatar/full/red.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/images/avatar/glasses.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/images/avatar/hair/black10R.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/images/avatar/hair/black10S.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/images/avatar/hair/black7R.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/images/avatar/hair/black7S.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/images/avatar/hair/black9R.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/images/avatar/hair/black9S.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/images/avatar/hair/blond10R.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/images/avatar/hair/blond10S.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/images/avatar/hair/blond6.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/images/avatar/hair/blond6.png-autosave.kra" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/images/avatar/hair/blond6R.png-autosave.kra" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/images/avatar/hair/blond6S.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/images/avatar/hair/blond7R.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/images/avatar/hair/blond7S.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/images/avatar/hair/blond8R.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/images/avatar/hair/blond8S.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/images/avatar/hair/blond9R.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/images/avatar/hair/blond9S.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/images/avatar/hair/brown10R.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/images/avatar/hair/brown10S.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/images/avatar/hair/brown7R.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/images/avatar/hair/brown7S.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/images/avatar/hair/brown9R.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/images/avatar/hair/brown9S.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/images/document_6.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/images/img.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/images/welcome.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/images/avatar/backHead/black10B.PNG" beforeDir="false" afterPath="$PROJECT_DIR$/client/public/images/avatar/backHead/black10B.PNG" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/images/avatar/backHead/black10B.PNG-autosave.kra" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/images/avatar/backHead/black1B.png" beforeDir="false" afterPath="$PROJECT_DIR$/client/public/images/avatar/backHead/black1B.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/images/avatar/backHead/black2B.png" beforeDir="false" afterPath="$PROJECT_DIR$/client/public/images/avatar/backHead/black2B.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/images/avatar/backHead/black3B.png" beforeDir="false" afterPath="$PROJECT_DIR$/client/public/images/avatar/backHead/black3B.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/images/avatar/backHead/black4B.png" beforeDir="false" afterPath="$PROJECT_DIR$/client/public/images/avatar/backHead/black4B.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/images/avatar/backHead/black5B.png" beforeDir="false" afterPath="$PROJECT_DIR$/client/public/images/avatar/backHead/black5B.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/images/avatar/backHead/black7B.PNG" beforeDir="false" afterPath="$PROJECT_DIR$/client/public/images/avatar/backHead/black7B.PNG" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/images/avatar/backHead/black8B.PNG" beforeDir="false" afterPath="$PROJECT_DIR$/client/public/images/avatar/backHead/black8B.PNG" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/images/avatar/backHead/black9B.PNG" beforeDir="false" afterPath="$PROJECT_DIR$/client/public/images/avatar/backHead/black9B.PNG" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/images/avatar/backHead/black9B.PNG-autosave.kra" beforeDir="false" afterPath="$PROJECT_DIR$/client/public/images/avatar/backHead/black9B.PNG-autosave.kra" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/images/avatar/backHead/blackH1B.png" beforeDir="false" afterPath="$PROJECT_DIR$/client/public/images/avatar/backHead/blackH1B.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/images/avatar/backHead/blackH2B.png" beforeDir="false" afterPath="$PROJECT_DIR$/client/public/images/avatar/backHead/blackH2B.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/images/avatar/backHead/blackH3B.png" beforeDir="false" afterPath="$PROJECT_DIR$/client/public/images/avatar/backHead/blackH3B.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/images/avatar/backHead/blackHd1B.png" beforeDir="false" afterPath="$PROJECT_DIR$/client/public/images/avatar/backHead/blackHd1B.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/images/avatar/backHead/blond10B.PNG" beforeDir="false" afterPath="$PROJECT_DIR$/client/public/images/avatar/backHead/blond10B.PNG" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/images/avatar/backHead/blond7B.PNG" beforeDir="false" afterPath="$PROJECT_DIR$/client/public/images/avatar/backHead/blond7B.PNG" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/images/avatar/backHead/blond8B.PNG" beforeDir="false" afterPath="$PROJECT_DIR$/client/public/images/avatar/backHead/blond8B.PNG" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/images/avatar/backHead/blond9B.PNG" beforeDir="false" afterPath="$PROJECT_DIR$/client/public/images/avatar/backHead/blond9B.PNG" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/images/avatar/backHead/blonde1B.png" beforeDir="false" afterPath="$PROJECT_DIR$/client/public/images/avatar/backHead/blonde1B.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/images/avatar/backHead/blonde2B.png" beforeDir="false" afterPath="$PROJECT_DIR$/client/public/images/avatar/backHead/blonde2B.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/images/avatar/backHead/blonde3B.png" beforeDir="false" afterPath="$PROJECT_DIR$/client/public/images/avatar/backHead/blonde3B.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/images/avatar/backHead/blonde4B.png" beforeDir="false" afterPath="$PROJECT_DIR$/client/public/images/avatar/backHead/blonde4B.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/images/avatar/backHead/blonde5B.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/images/avatar/backHead/blonde6B.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/images/avatar/backHead/blondeH1B.png" beforeDir="false" afterPath="$PROJECT_DIR$/client/public/images/avatar/backHead/blondeH1B.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/images/avatar/backHead/blondeH2B.png" beforeDir="false" afterPath="$PROJECT_DIR$/client/public/images/avatar/backHead/blondeH2B.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/images/avatar/backHead/blondeH3B.png" beforeDir="false" afterPath="$PROJECT_DIR$/client/public/images/avatar/backHead/blondeH3B.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/images/avatar/backHead/brown10B.PNG" beforeDir="false" afterPath="$PROJECT_DIR$/client/public/images/avatar/backHead/brown10B.PNG" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/images/avatar/backHead/brown1B.png" beforeDir="false" afterPath="$PROJECT_DIR$/client/public/images/avatar/backHead/brown1B.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/images/avatar/backHead/brown2B.png" beforeDir="false" afterPath="$PROJECT_DIR$/client/public/images/avatar/backHead/brown2B.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/images/avatar/backHead/brown3B.png" beforeDir="false" afterPath="$PROJECT_DIR$/client/public/images/avatar/backHead/brown3B.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/images/avatar/backHead/brown4B.png" beforeDir="false" afterPath="$PROJECT_DIR$/client/public/images/avatar/backHead/brown4B.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/images/avatar/backHead/brown7B.PNG" beforeDir="false" afterPath="$PROJECT_DIR$/client/public/images/avatar/backHead/brown7B.PNG" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/images/avatar/backHead/brown8B.png" beforeDir="false" afterPath="$PROJECT_DIR$/client/public/images/avatar/backHead/brown8B.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/images/avatar/backHead/brown9B.PNG" beforeDir="false" afterPath="$PROJECT_DIR$/client/public/images/avatar/backHead/brown9B.PNG" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/images/avatar/backHead/brownH1B.png" beforeDir="false" afterPath="$PROJECT_DIR$/client/public/images/avatar/backHead/brownH1B.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/images/avatar/backHead/brownH2B.png" beforeDir="false" afterPath="$PROJECT_DIR$/client/public/images/avatar/backHead/brownH2B.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/images/avatar/backHead/brownH3B.png" beforeDir="false" afterPath="$PROJECT_DIR$/client/public/images/avatar/backHead/brownH3B.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/images/avatar/backHead/purpleB.png" beforeDir="false" afterPath="$PROJECT_DIR$/client/public/images/avatar/backHead/purpleB.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/images/avatar/face/lightRoundless.png" beforeDir="false" afterPath="$PROJECT_DIR$/client/public/images/avatar/face/lightRoundless.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/Features/SignUp/SignupPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/Features/SignUp/SignupPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/Features/avatar/Avatar.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/Features/avatar/Avatar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/Features/settings/Settings.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/Features/settings/Settings.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/Features/settings/settingsSlice.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/Features/settings/settingsSlice.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/Features/story/Story.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/Features/story/Story.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/components/Human.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Human.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/folder_layout.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/folder_layout.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/images/avatar/face/lightRoundless.png" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/images/avatar/face/lightRoundless.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/styles/Homepage.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/styles/Homepage.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/styles/human.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/styles/human.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/styles/settings.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/styles/settings.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/styles/story.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/styles/story.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/images/avatar/cochlear/red.png-autosave.kra" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/images/avatar/hair/blond6.png-autosave.kra" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/images/avatar/hair/blond6R.png-autosave.kra" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -306,6 +142,7 @@
       <workItem from="1702127691333" duration="62000" />
       <workItem from="1702469377867" duration="1968000" />
       <workItem from="1703097655728" duration="7014000" />
+      <workItem from="1703416608552" duration="3510000" />
     </task>
     <servers />
   </component>
