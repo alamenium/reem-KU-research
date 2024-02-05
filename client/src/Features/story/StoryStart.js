@@ -26,7 +26,7 @@ function StoryStart(){
             </NavLink>
 
             {avatar==="On" && <Human full={true} d_on={"On"}
-                    d_text={caption === "English" ? "Hello! Lets start reading the story" : "اهلا! هيا لنبدأ قراءه القصة"}></Human>}
+                    d_text={caption === "English" ? "I’m excited to read this story together! Lets start!" : "انا متحمس لقراءة هذه القصة معًا! هيا نبدأ!"}></Human>}
         </div>
     );
 }

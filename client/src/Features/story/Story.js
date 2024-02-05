@@ -19,16 +19,25 @@ function Story(){
         document.querySelector("body").style.backgroundImage = "url('../images/bg-white.png')";
     },[]);
 
-    useEffect(()=>{
-        setFileType("gif");
-        if(audio==="On")
-        document.getElementById("voice").play();
-    }, [page])
     const [rightDis, setRightDis] = useState(false);
     const [leftDis, setLeftDis] = useState(true);
     const [fileType, setFileType] = useState("jpg");
     const [dia_index, setDia_index] = useState(0);
 
+    useEffect(()=>{
+        if(((dia_index >= beforeReading[(page-1)/2].length)||avatar==="Off") && cap === 'On')
+            if(document.getElementById("voice") !== null)
+                document.getElementById("voice").play();
+    }, [page])
+
+
+    useEffect(()=>{
+        setFileType("gif");
+
+        if(((dia_index >= beforeReading[(page-1)/2].length)||avatar==="Off") && cap === 'On')
+            if(document.getElementById("voice") !== null)
+             document.getElementById("voice").play();
+    }, [((dia_index >= beforeReading[(page-1)/2].length)||avatar==="Off") && cap === 'On'])
     const handleRightClick = () => {
         if((dia_index < (afterReading[(page-1)/2].length + beforeReading[(page-1)/2].length))&& avatar==="On"){
             setDia_index(dia_index+1);
@@ -102,7 +111,7 @@ function Story(){
                 exact
                 to={"https://docs.google.com/forms/d/1m13GS18t5CUwHnHGbTj1eMIagBw-dVQ_Bg_Y6OjcrN0/edit"}
             >
-                <button className={"starbutton"}> End Story!</button>
+                <button className={"starbutton"}  id ={"starrrr"}> End Story!</button>
             </NavLink>}
 
             {avatar==="On" &&<div>

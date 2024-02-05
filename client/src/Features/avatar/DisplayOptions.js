@@ -9,7 +9,7 @@ import { setFace, setColor, setHair,
     setSkin, setGlasses,
     setMouth, setNose , setCochlear} from "./avatarSlice";
 
-function DisplayOptions({type}) {
+function DisplayOptions({type, tabs}) {
     const dispatch = useDispatch();
 
     const {color, face } = useSelector((state) => state.avatar);
@@ -19,11 +19,17 @@ function DisplayOptions({type}) {
     // State to track the selected facial feature and animation flag
     const [selectedFeature, setSelectedFeature] = useState(null);
 
+    const tabSelect =( newTab)=>{
+        tabs(newTab);
+    }
+
     const handleSliceChange =(value)=>{
         value=`../images/avatar/${type}/${value}`
+        let delay = 50;
         switch (type) {
             case "face":
                 dispatch (setFace(value));
+                setTimeout(()=>tabSelect("color"), delay);
                 break;
             case "color":
                 if(value.includes("light")) {
@@ -36,28 +42,36 @@ function DisplayOptions({type}) {
                     dispatch(setColor("black"));
                     dispatch (setFace(face.replace("light", "black").replace("dark", "black")));
                 }
+                setTimeout(()=>tabSelect("clothes"), delay);
 
                 break;
             case "hair":
                 dispatch( setHair(value));
+                setTimeout(()=>tabSelect("cochlear"), delay);
                 break;
             case "cochlear":
                 dispatch( setCochlear(value));
+                setTimeout(()=>tabSelect("glasses"), delay);
                 break;
             case "eyes":
                 dispatch( setEyes(value));
+                setTimeout(()=>tabSelect("hair"), delay);
                 break;
             case "clothes":
                 dispatch  (setClothes(value));
+                setTimeout(()=>tabSelect("eyes"), delay);
                 break;
             case "skin":
                 dispatch  ( setSkin(value));
+                setTimeout(()=>tabSelect("glasses"), delay);
                 break;
             case "glasses":
                 dispatch    (setGlasses(value));
+                setTimeout(()=>tabSelect("mouth"), delay);
                 break;
             case "mouth":
                 dispatch    (setMouth(value));
+                setTimeout(()=>tabSelect("nose"), delay);
                 break;
             case "nose":
                 dispatch  (setNose(value));

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, {useEffect, useState} from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import {
     setAudio,
@@ -23,6 +23,14 @@ function Settings() {
     const [link, setLink] = useState('../storystart');
     const [text, setText] = useState('Story');
 
+    useEffect(()=>{
+        audioOff();
+        arabic();
+        textOn();
+        animationOff();
+        avatarOff();
+
+    },[])
 
     const audioOn = () => {
         dispatch(setAudio('On'));

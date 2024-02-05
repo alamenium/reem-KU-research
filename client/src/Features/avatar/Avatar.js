@@ -127,7 +127,7 @@ function Avatar() {
             </div>
 
         {/* Render the selected tab's content here */}
-       <DisplayOptions className={"displayChoices"} type={activeTab}/>
+       <DisplayOptions className={"displayChoices"} type={activeTab} tabs = {handleTabClick}/>
 
       </div>
         </main>

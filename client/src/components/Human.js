@@ -9,12 +9,15 @@ import noseSRC from "../images/avatar/nose/1.png";
 import {useSelector} from "react-redux";
 import React, {useEffect, useState} from "react";
 import story from "../Features/story/Story";
+import avatar from "../Features/avatar/Avatar";
 
 function Human({d_on = false, d_text = "", full = false, back = false}){
 
     const { face, hair, eyes,cochlear, clothes, glasses, mouth, nose } = useSelector((state) => state.avatar);
     const [currHair, changeCurrHair] = useState("none");
     const { page , started } = useSelector((state) => state.story);
+
+    const {audio, caption, animation, avatar, cap} = useSelector((state) => state.settings);
     useEffect(() => {
         if(full){
             document.getElementById("human").style.top="-5rem"
@@ -45,11 +48,14 @@ function Human({d_on = false, d_text = "", full = false, back = false}){
             {glasses!=="none" && !back &&<img id={"glasses"} src={glasses} alt={""}/>}
              {mouth!=="none" && !back &&<img id={"mouth"} src={mouth} alt={""}/>}
             {nose!=="none" &&!back && <img id={"nose"} src={nose} alt={""}/>}
-            {d_on && back === false &&<div style={{position: "relative", left: "-300px", top: "100px", fontSize: "1.5rem"}} className="message-container l">
+            {d_on && back === false && (d_text.length > 2) && <div style={{position: "relative", left: "-300px", top: "100px", fontSize: "1.5rem"}} className="message-container l">
                 {d_text}
             </div>}
-            {d_on && back === true &&<div style={{position: "relative", right: "-300px", top: "100px", fontSize: "1.5rem"}} className="message-container r">
+            {d_on && back === true && (d_text.length > 2) && <div style={{position: "relative", right: "-300px", top: "100px", fontSize: "1.5rem"}} className="message-container r">
                 {d_text}
+            </div>}
+            {(page ===25) && (avatar === "On") && <div style={{position: "relative", right: "-300px", top: "100px", fontSize: "1.5rem"}} className="message-container r">
+                {caption === "English"? "Be yourself, and let those who accept you, accept you.":"كن نفسك، وليتقبلك من يتقبلك"}
             </div>}
         </div>
 </div>
