@@ -6,42 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="dde5eabf-688a-4c09-918b-9a8ef3ad1ec8" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/audio/arabic/1.mp3" beforeDir="false" afterPath="$PROJECT_DIR$/client/public/audio/arabic/1.mp3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/audio/arabic/11.mp3" beforeDir="false" afterPath="$PROJECT_DIR$/client/public/audio/arabic/11.mp3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/audio/arabic/13.mp3" beforeDir="false" afterPath="$PROJECT_DIR$/client/public/audio/arabic/13.mp3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/audio/arabic/15.mp3" beforeDir="false" afterPath="$PROJECT_DIR$/client/public/audio/arabic/15.mp3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/audio/arabic/17.mp3" beforeDir="false" afterPath="$PROJECT_DIR$/client/public/audio/arabic/17.mp3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/audio/arabic/19.mp3" beforeDir="false" afterPath="$PROJECT_DIR$/client/public/audio/arabic/19.mp3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/audio/arabic/21.mp3" beforeDir="false" afterPath="$PROJECT_DIR$/client/public/audio/arabic/21.mp3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/audio/arabic/23.mp3" beforeDir="false" afterPath="$PROJECT_DIR$/client/public/audio/arabic/23.mp3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/audio/arabic/3.mp3" beforeDir="false" afterPath="$PROJECT_DIR$/client/public/audio/arabic/3.mp3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/audio/arabic/5.mp3" beforeDir="false" afterPath="$PROJECT_DIR$/client/public/audio/arabic/5.mp3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/audio/arabic/7.mp3" beforeDir="false" afterPath="$PROJECT_DIR$/client/public/audio/arabic/7.mp3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/audio/arabic/9.mp3" beforeDir="false" afterPath="$PROJECT_DIR$/client/public/audio/arabic/9.mp3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/audio/english/1.mp3" beforeDir="false" afterPath="$PROJECT_DIR$/client/public/audio/english/1.mp3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/audio/english/11.mp3" beforeDir="false" afterPath="$PROJECT_DIR$/client/public/audio/english/11.mp3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/audio/english/13.mp3" beforeDir="false" afterPath="$PROJECT_DIR$/client/public/audio/english/13.mp3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/audio/english/15.mp3" beforeDir="false" afterPath="$PROJECT_DIR$/client/public/audio/english/15.mp3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/audio/english/17.mp3" beforeDir="false" afterPath="$PROJECT_DIR$/client/public/audio/english/17.mp3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/audio/english/19.mp3" beforeDir="false" afterPath="$PROJECT_DIR$/client/public/audio/english/19.mp3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/audio/english/21.mp3" beforeDir="false" afterPath="$PROJECT_DIR$/client/public/audio/english/21.mp3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/audio/english/23.mp3" beforeDir="false" afterPath="$PROJECT_DIR$/client/public/audio/english/23.mp3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/audio/english/3.mp3" beforeDir="false" afterPath="$PROJECT_DIR$/client/public/audio/english/3.mp3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/audio/english/5.mp3" beforeDir="false" afterPath="$PROJECT_DIR$/client/public/audio/english/5.mp3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/audio/english/7.mp3" beforeDir="false" afterPath="$PROJECT_DIR$/client/public/audio/english/7.mp3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/audio/english/9.mp3" beforeDir="false" afterPath="$PROJECT_DIR$/client/public/audio/english/9.mp3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/images/avatar/backface/black.png" beforeDir="false" afterPath="$PROJECT_DIR$/client/public/images/avatar/backface/black.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/images/avatar/backface/dark.png" beforeDir="false" afterPath="$PROJECT_DIR$/client/public/images/avatar/backface/dark.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/images/avatar/backface/light.png" beforeDir="false" afterPath="$PROJECT_DIR$/client/public/images/avatar/backface/light.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/Features/avatar/Avatar.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/Features/avatar/Avatar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/Features/avatar/DisplayOptions.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/Features/avatar/DisplayOptions.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/Features/settings/Settings.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/Features/settings/Settings.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/Features/story/Captions.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/Features/story/Captions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/Features/story/Questions.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/Features/story/Questions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/Features/story/Story.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/Features/story/Story.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/Features/story/StoryStart.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/Features/story/StoryStart.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/Features/story/pages.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/Features/story/pages.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/Human.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Human.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -172,7 +137,7 @@
       <workItem from="1703097655728" duration="7014000" />
       <workItem from="1703416608552" duration="4679000" />
       <workItem from="1706024164220" duration="4021000" />
-      <workItem from="1706982554045" duration="4018000" />
+      <workItem from="1706982554045" duration="4787000" />
     </task>
     <servers />
   </component>

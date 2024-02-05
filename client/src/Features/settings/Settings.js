@@ -12,6 +12,18 @@ import Button from 'react-bootstrap/Button';
 import { NavLink } from 'react-router-dom';
 import '../../styles/settings.css'; // Import your custom CSS for this component
 import gearImage from '../../images/gear.png';
+import {
+    setClothes,
+    setCochlear,
+    setColor,
+    setEyes,
+    setFace,
+    setGlasses,
+    setHair,
+    setMouth, setNose,
+    setSkin
+} from "../avatar/avatarSlice";
+import {setPage} from "../story/storySlice";
 
 function Settings() {
     const dispatch = useDispatch();
@@ -29,6 +41,17 @@ function Settings() {
         textOn();
         animationOff();
         avatarOff();
+        dispatch(setPage(1));
+        dispatch (setFace("../images/avatar/default/default.png"));
+        dispatch (setColor("light"));
+        dispatch (setHair("none"));
+        dispatch (setCochlear("none"));
+        dispatch (setEyes("none"));
+        dispatch (setClothes("none"));
+        dispatch (setSkin("none"));
+        dispatch (setGlasses("none"));
+        dispatch (setMouth("none"));
+        dispatch (setNose("none"));
 
     },[])
 
