@@ -1,0 +1,256 @@
+import React, {useEffect, useState} from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import {
+    setAudio,
+    setText as setCap,
+    setCaption,
+    setAnimation,
+    setAvatar,
+
+} from './settingsSlice'; // Import your Redux actions
+import Button from 'react-bootstrap/Button';
+import { NavLink } from 'react-router-dom';
+import '../../styles/settings.css'; // Import your custom CSS for this component
+import gearImage from '../../images/gear.png';
+import {
+    setClothes,
+    setCochlear,
+    setColor,
+    setEyes,
+    setFace,
+    setGlasses,
+    setHair,
+    setMouth, setNose,
+    setSkin
+} from "../avatar/avatarSlice";
+import {setPage} from "../story/storySlice";
+
+function Settings() {
+    const dispatch = useDispatch();
+    const {cap, audio, caption, animation, avatar } = useSelector(
+        (state) => state.settings
+    );
+
+    const [msg, setMsg] = useState('Save Changes');
+    const [link, setLink] = useState('../storystart');
+    const [text, setText] = useState('Story');
+
+    useEffect(()=>{
+        audioOff();
+        arabic();
+        textOn();
+        animationOff();
+        avatarOff();
+        dispatch(setPage(1));
+        dispatch (setFace("../images/avatar/default/default.png"));
+        dispatch (setColor("light"));
+        dispatch (setHair("none"));
+        dispatch (setCochlear("none"));
+        dispatch (setEyes("none"));
+        dispatch (setClothes("none"));
+        dispatch (setSkin("none"));
+        dispatch (setGlasses("none"));
+        dispatch (setMouth("none"));
+        dispatch (setNose("none"));
+
+    },[])
+
+    const audioOn = () => {
+        dispatch(setAudio('On'));
+    };
+
+    const audioOff = () => {
+        dispatch(setAudio('Off'));
+    };
+    const textOn = () => {
+        dispatch(setCap("On"));
+    };
+    const textOff = () => {
+        dispatch(setCap('Off'));
+    };
+
+    const english = () => {
+        dispatch(setCaption('English'));
+    };
+
+    const arabic = () => {
+        dispatch(setCaption('Arabic'));
+    };
+
+    const animationOn = () => {
+        dispatch(setAnimation('On'));
+    };
+
+    const animationOff = () => {
+        dispatch(setAnimation('Off'));
+    };
+
+    const avatarOn = () => {
+        dispatch(setAvatar('On'));
+        setLink("../avatar")
+        setText("Avatar Creation")
+    };
+
+    const avatarOff = () => {
+        dispatch(setAvatar('Off'));
+        setLink("../storystart")
+        setText("Story")
+    };
+
+    const saveChange = () => {
+        setMsg('Changes Saved');
+    };
+
+    return (
+        <div className="settings-container">
+
+            <img src={gearImage} alt="Gear Right" className="gear-left" />
+            <h2>Settings</h2>
+            <div className="settings-group">
+                <h5>Audio</h5>
+                <Button
+                    variant="secondary"
+                    onClick={audioOn}
+                    className={`${
+                        audio === 'On' ? 'active-button' : 'inactive-button'
+                    }`}
+                >
+                    On
+                </Button>
+                <Button
+                    variant="secondary"
+                    onClick={audioOff}
+                    className={`${
+                        audio === 'Off' ? 'active-button' : 'inactive-button'
+                    }`}
+                >
+                    Off
+                </Button>
+            </div>
+
+            <div className="settings-group">
+                <h5>Closed Captioning</h5>
+                <Button
+                    variant="secondary"
+                    onClick={english}
+                    className={`${
+                        caption === 'English' ? 'active-button' : 'inactive-button'
+                    }`}
+                >
+                    English
+                </Button>
+                <Button
+                    variant="secondary"
+                    onClick={arabic}
+                    className={`${
+                        caption === 'Arabic' ? 'active-button' : 'inactive-button'
+                    }`}
+                >
+                    Arabic
+                </Button>
+            </div>
+
+            <div className="settings-group">
+                <h5>Animation</h5>
+                <Button
+                    variant="secondary"
+                    onClick={animationOn}
+                    className={`${
+                        animation === 'On' ? 'active-button' : 'inactive-button'
+                    }`}
+                >
+                    On
+                </Button>
+                <Button
+                    variant="secondary"
+                    onClick={animationOff}
+                    className={`${
+                        animation === 'Off' ? 'active-button' : 'inactive-button'
+                    }`}
+                >
+                    Off
+                </Button>
+            </div>
+
+            <div className="settings-group">
+                <h5>Avatar</h5>
+                <Button
+                    variant="secondary"
+                    onClick={avatarOn}
+                    className={`${
+                        avatar === 'On' ? 'active-button' : 'inactive-button'
+                    }`}
+                >
+                    On
+                </Button>
+                <Button
+                    variant="secondary"
+                    onClick={avatarOff}
+                    className={`${
+                        avatar === 'Off' ? 'active-button' : 'inactive-button'
+                    }`}
+                >
+                    Off
+                </Button>
+            </div>
+            <div className="settings-group">
+                <h5>Text</h5>
+                <Button
+                    variant="secondary"
+                    onClick={textOn}
+                    className={`${
+                        cap === 'On' ? 'active-button' : 'inactive-button'
+                    }`}
+                >
+                    On
+                </Button>
+                <Button
+                    variant="secondary"
+                    onClick={textOff}
+                    className={`${
+                        cap === 'Off' ? 'active-button' : 'inactive-button'
+                    }`}
+                >
+                    Off
+                </Button>
+            </div>
+            <div className="settings-info">
+                <div className="default-settings">
+                    <h5>Default</h5>
+                    <p>
+                        <div>Audio: Off</div>
+                        <div>Caption: Arabic</div>
+                        <div>Animation: Off</div>
+                        <div>Avatar: Off</div>
+                        <div>Text: On</div>
+                    </p>
+                </div>
+                <div className="current-settings">
+                    <h5>Current</h5>
+                    <p>
+                        <div>Audio: {audio}</div>
+                        <div>Caption: {caption}</div>
+                        <div>Animation: {animation}</div>
+                        <div>Avatar: {avatar}</div>
+                        <div>Text: {cap}</div>
+                    </p>
+                </div>
+            </div>
+
+            <NavLink
+                className="nav-link"
+                exact
+                to={link}
+                activeClassName="nav-link-active"
+            >
+                <button onClick={()=>document.querySelector("body").style.backgroundImage= "url('../images/bg-white.png')"
+                } className="story-button">{text}</button>
+            </NavLink>
+
+
+            <img src={gearImage} alt="Gear Right" className="gear-right" />
+        </div>
+    );
+}
+
+export default Settings;

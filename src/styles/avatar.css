@@ -1,0 +1,46 @@
+/* styles.css (or your preferred stylesheet) */
+#avatar .button-container {
+    display: flex;
+    justify-content: space-between;
+    background-color: #fff; /* Dark background color */
+    padding: 10px; /* Add padding for spacing */
+    margin: 0;
+    position: absolute;
+    bottom: 50vh;
+    width: 100%;
+   box-sizing: border-box;
+}
+
+.blue-btn{
+    background-color: dodgerblue !important;
+    color: white !important;
+    padding: 10px 30px!important;
+    float: right;
+    margin-right: 1rem!important;
+}
+
+#avatar .btn {
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 1em;
+    flex-grow: 1; /* Make buttons fill the available space equally */
+    color: black; /* Text color */
+    background-color: lightgray; /* Button background color */
+    border: none;
+    padding: 10px;
+    margin: 5px; /* Add margin for spacing between buttons */
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Add a transition for background color */
+}
+
+#avatar .btn.active {
+    background-color: darkgray; /* Active button background color */
+}
+
+#avatar #test{
+    color: red !important;
+}
+
+#avatar body{
+    background-image: url("../images/bg-white.png");
+}

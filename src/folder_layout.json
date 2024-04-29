@@ -1,0 +1,353 @@
+{
+  "files": [
+    ".DS_Store",
+    "defaultBlank.png",
+    "glasses.png"
+  ],
+  "backHead": {
+    "files": [
+<<<<<<< Updated upstream:client/src/folder_layout.json
+      ".black3B.png-autosave.kra",
+=======
+>>>>>>> Stashed changes:src/folder_layout.json
+      "black10B.PNG",
+      "black1B.png",
+      "black2B.png",
+      "black3B.png",
+      "black4B.png",
+      "black5B.png",
+      "black6B.png",
+      "black7B.PNG",
+      "black8B.PNG",
+      "black9B.PNG",
+      "blackH1B.png",
+      "blackH2B.png",
+      "blackH3B.png",
+      "blackHd1B.png",
+      "blond10B.PNG",
+      "blond5B.png",
+      "blond6B.png",
+      "blond7B.PNG",
+      "blond8B.PNG",
+      "blond9B.PNG",
+      "blonde1B.png",
+      "blonde2B.png",
+      "blonde3B.png",
+      "blonde4B.png",
+      "blondeH1B.png",
+      "blondeH2B.png",
+      "blondeH3B.png",
+      "blue.png",
+      "blue2.png",
+      "brown10B.PNG",
+      "brown1B.png",
+      "brown2B.png",
+      "brown3B.png",
+      "brown4B.png",
+      "brown5B.png",
+      "brown6B.png",
+      "brown7B.PNG",
+      "brown8B.png",
+      "brown9B.PNG",
+      "brownH1B.png",
+      "brownH2B.png",
+      "brownH3B.png",
+      "orange.png",
+      "peach2.png",
+      "pink.png",
+      "purple2.png",
+      "purpleB.png"
+    ]
+  },
+  "backface": {
+    "files": [
+      "black.png",
+      "dark.png",
+      "light.png"
+    ]
+  },
+  "clothes": {
+    "files": [
+      "black.png",
+      "blue.png",
+      "orange.png",
+      "pink.png",
+      "purple.png",
+      "red.png",
+      "white.png"
+    ]
+  },
+  "cochlear": {
+    "files": [
+      "orange.png",
+      "purple.png",
+      "red.png"
+    ]
+  },
+  "color": {
+    "files": [
+      "blackRound.png",
+      "blackRoundless.png",
+      "blackSkinny.png",
+      "blackSkinnyless.png",
+      "blackSquare.png",
+      "blackSquareless.png",
+      "darkRoundFace.png",
+      "darkRoundless.png",
+      "darkSkinny.png",
+      "darkSkinnyless.png",
+      "darkSquare.png",
+      "darkSquareless.png",
+      "lightRound.png",
+      "lightRoundless.png",
+      "lightSkinny.png",
+      "lightSkinnyless.png",
+      "lightSquare.png",
+      "lightSquareless.png",
+      "skinnyLightless.png"
+    ]
+  },
+  "default": {
+    "files": [
+      "default.png"
+    ]
+  },
+  "eyebrows": {
+    "files": [
+      "1.png",
+      "2.png",
+      "3.png",
+      "4.png",
+      "5.png",
+      "black1.png",
+      "black2.png",
+      "black3.png",
+      "black4.png",
+      "black5.png",
+      "blonde1.png",
+      "blonde2.png",
+      "blonde3.png",
+      "blonde4.png",
+      "blonde5.png"
+    ]
+  },
+  "eyes": {
+    "files": [
+      "basicBlack.png",
+      "basicBrown.png",
+      "basicGreen.png",
+      "closeBlack.png",
+      "closeBrown.png",
+      "closeGreen.png",
+      "cuteBlack.png",
+      "cuteBrown.png",
+      "cuteGreen.png",
+      "lashesBlack.png",
+      "lashesBrown.png",
+      "lashesGreen.png"
+    ]
+  },
+  "face": {
+    "files": [
+      "blackRound.png",
+      "blackRoundless.png",
+      "blackSkinny.png",
+      "blackSkinnyless.png",
+      "blackSquare.png",
+      "blackSquareless.png",
+      "darkRoundFace.png",
+      "darkRoundless.png",
+      "darkSkinny.png",
+      "darkSkinnyless.png",
+      "darkSquare.png",
+      "darkSquareless.png",
+      "lightRound.png",
+      "lightRoundless.png",
+      "lightSkinny.png",
+      "lightSkinnyless.png",
+      "lightSquare.png",
+      "lightSquareless.png"
+    ]
+  },
+  "full": {
+    "files": [
+<<<<<<< Updated upstream:client/src/folder_layout.json
+      ".DS_Store",
+      ".Untitled_Artwork 48.png-autosave.kra",
+      ".Untitled_Artwork 50.png-autosave.kra",
+      ".Untitled_Artwork 51.png-autosave.kra",
+      ".Untitled_Artwork 52.png-autosave.kra",
+      "Untitled_Artwork 50 copy 3.png",
+      "Untitled_Artwork 50 copy 3.png~",
+      "Untitled_Artwork 50 copy 4.png",
+      "Untitled_Artwork 50 copy 4.png~",
+      "Untitled_Artwork 50 copy 5.png",
+      "Untitled_Artwork 50 copy 5.png~",
+=======
+>>>>>>> Stashed changes:src/folder_layout.json
+      "black.png",
+      "blue.png",
+      "orange.png",
+      "pink.png",
+      "purple.png",
+      "red.png",
+<<<<<<< Updated upstream:client/src/folder_layout.json
+      "white.png",
+      "white.png~"
+=======
+      "Untitled_Artwork 50 copy 3.png",
+      "Untitled_Artwork 50 copy 4.png",
+      "Untitled_Artwork 50 copy 5.png",
+      "white.png"
+>>>>>>> Stashed changes:src/folder_layout.json
+    ]
+  },
+  "glasses": {
+    "files": [
+      "blue.png",
+      "blueDots.png",
+      "purple.png",
+      "purpleDots.png",
+      "red.png",
+      "redDots.png"
+    ]
+  },
+  "hair": {
+    "files": [
+      ".DS_Store",
+      "Black2R.png",
+      "black1.png",
+      "black10.png",
+      "black10R.png",
+      "black10S.png",
+      "black1R.png",
+      "black1S.png",
+      "black2.png",
+      "black2S.png",
+      "black3.png",
+      "black3R.png",
+      "black3S.png",
+      "black4.png",
+      "black4R.png",
+      "black4S.png",
+      "black5.png",
+      "black5R.png",
+      "black5S.png",
+      "black6.png",
+      "black6R.png",
+      "black6S.png",
+      "black7.png",
+      "black7R.png",
+      "black7S.png",
+      "black8.png",
+      "black8R.png",
+      "black8S.png",
+      "black9.png",
+      "black9R.png",
+      "black9S.png",
+      "blackH1.png",
+      "blackH1R.png",
+      "blackH1S.png",
+      "blackH2.png",
+      "blackH2R.png",
+      "blackH2S.png",
+      "blackH3.png",
+      "blackH3R.png",
+      "blackH3S.png",
+      "blond10.png",
+      "blond10R.png",
+      "blond10S.png",
+      "blond5.png",
+      "blond5R.png",
+      "blond5S.png",
+      "blond6.png",
+      "blond6R.png",
+      "blond6S.png",
+      "blond7.png",
+      "blond7R.png",
+      "blond7S.png",
+      "blond8.png",
+      "blond8R.png",
+      "blond8S.png",
+      "blond9.png",
+      "blond9R.png",
+      "blond9S.png",
+      "blonde1.png",
+      "blonde1R.png",
+      "blonde1S.png",
+      "blonde2.png",
+      "blonde2R.png",
+      "blonde2S.png",
+      "blonde3R.png",
+      "blonde3S.png",
+      "blonde4.png",
+      "blonde4R.png",
+      "blonde4S.png",
+      "blondeH1.png",
+      "blondeH1R.png",
+      "blondeH1S.png",
+      "blondeH2.png",
+      "blondeH2R.png",
+      "blondeH2S.png",
+      "blondeH3.png",
+      "blondeH3R.png",
+      "blondeH3S.png",
+      "brown1.png",
+      "brown10.png",
+      "brown10R.png",
+      "brown10S.png",
+      "brown1R.png",
+      "brown1S.png",
+      "brown2.png",
+      "brown2R.png",
+      "brown2S.png",
+      "brown3.png",
+      "brown3R.png",
+      "brown3S.png",
+      "brown4.png",
+      "brown4R.png",
+      "brown4S.png",
+      "brown5.png",
+      "brown5R.png",
+      "brown5S.png",
+      "brown6.png",
+      "brown6R.png",
+      "brown6S.png",
+      "brown7.png",
+      "brown7R.png",
+      "brown7S.png",
+      "brown8.png",
+      "brown8R.png",
+      "brown8S.png",
+      "brown9.png",
+      "brown9R.png",
+      "brown9S.png",
+      "brownH1.png",
+      "brownH1R.png",
+      "brownH1S.png",
+      "brownH2.png",
+      "brownH2R.png",
+      "brownH2S.png",
+      "brownH3.png",
+      "brownH3R.png",
+      "brownH3S.png"
+    ]
+  },
+  "mouth": {
+    "files": [
+      "bigOpen.png",
+      "closed.png",
+      "o.png",
+      "open.png"
+    ]
+  },
+  "nose": {
+    "files": [
+      "1.png",
+      "2.png",
+      "3.png",
+      "4.png",
+      "5.png"
+    ]
+  }
+}

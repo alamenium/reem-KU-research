@@ -1,0 +1,406 @@
+/* frontend/src/styles/styles.css */
+
+#dashboard {
+    height: 1800px!important;
+    padding: 1em;
+    background-color: #222 ;
+    color: #fff;
+    font-family: Arial, sans-serif;
+}
+
+#dashboard .app {
+    background-color: transparent;
+    color: #fff;
+    font-family: Arial, sans-serif;
+}
+
+#dashboard .container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+}
+
+#dashboard .upload-section {
+    background-color: #333;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+    height: 100%;
+    overflow-y: scroll;
+    width: 400px;
+}
+
+#dashboard .upload-section h2 {
+    color: #fff;
+}
+
+#dashboard .upload-section label {
+    color: #fff;
+}
+
+#dashboard .upload-section input[type="file"],
+#dashboard .upload-section input[type="text"] {
+    background-color: #444;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+#dashboard #storySelect{
+    width: 200px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+#dashboard #storySelect button{
+     background-color: royalblue;
+     color: #fff;
+     border: none;
+     padding: 10px;
+     margin:1em;
+     border-radius: 5px;
+
+ }
+
+#dashboard a:visited{
+    color: mediumpurple;
+}
+
+#dashboard a{
+    color: dodgerblue;
+}
+
+#dashboard select{
+    background-color: white;
+    color: #000;
+    border: none;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+
+}
+
+#dashboard #newstory{
+    background-color: #444;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    margin:0;
+}
+#dashboard .upload-section textarea {
+    box-sizing: border-box;
+    width: 100%;
+    background-color: #444;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+#dashboard .upload-button {
+    background-color: #ff5722;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#dashboard .upload-button:hover {
+    background-color: #ff7043;
+}
+
+#dashboard .sidebar {
+    width: 30%;
+    padding: 20px;
+    background-color: #333;
+}
+
+#dashboard .file-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+#dashboard .file-list li {
+    cursor: pointer;
+    margin-bottom: 10px;
+    background-color: #555;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.1);
+}
+
+#dashboard .file-list li:hover {
+    background-color: #666;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+}
+
+#dashboard .file-details {
+    margin-top: 20px;
+}
+
+#dashboard .dir {
+     display: flex;
+     justify-content: space-between;
+    padding: 0;
+    margin: 0;
+    height: 2em !important;
+ }
+
+#dashboard .view-page-button {
+    flex-grow: 1;
+    background-color: transparent;
+    color: white;
+    font-size: 1em;
+    line-height: 1em !important;
+    height: 3.5em;
+    border: none;
+    position: relative;
+    bottom: 0.5em;
+    right: 0.5em;
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
+}
+
+#dashboard .delete-button {
+    flex-shrink: 0;
+    cursor: pointer;
+    color: white;
+    background-color: black;
+}
+#dashboard .delete-button:hover {
+    background-color: red;
+}
+
+#dashboard li{
+
+    cursor: default !important;
+}
+
+#dashboard .loading-indicator {
+    display: inline-block;
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #3498db;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    animation: spin 2s linear infinite;
+    color: #ff5722;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* styles.css */
+
+#dashboard .app {
+    display: flex;
+    justify-content: space-between;
+}
+
+#dashboard .file-manager {
+    flex: 1;
+    margin-right: 20px;
+}
+
+#dashboard .main {
+    background-color: #444;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+#dashboard .upload-section {
+    margin-top: 20px;
+}
+
+#dashboard .upload-section div {
+    margin-bottom: 10px;
+}
+
+#dashboard .upload-section label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+    color: #fff; /* Update text color */
+}
+
+#dashboard .upload-button {
+    background-color: #ff5722;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#dashboard .upload-button:hover {
+    background-color: #ff7043;
+}
+
+#dashboard .text-inputs {
+    flex: 1;
+}
+
+#dashboard .text-inputs input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #333;
+    color: #fff; /* Update text color */
+}
+
+#dashboard .text-inputs button {
+    background-color: #ff5722;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#dashboard .text-inputs button:hover {
+    background-color: #ff7043;
+}
+
+#dashboard .sidebar {
+    flex: 1;
+}
+
+#dashboard .file-list {
+    list-style: none;
+    padding: 0;
+}
+
+#dashboard .file-list li {
+    padding: 10px;
+    cursor: pointer;
+    border-bottom: 1px solid #ccc;
+    color: #fff; /* Update text color */
+}
+
+#dashboard .file-list li:hover {
+    background-color: #666;
+}
+
+#dashboard .loading-indicator {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 24px;
+    color: #ff5722;
+}
+#dashboard .file-preview {
+    width: 100%; /* Set the fixed width */
+    border-radius: 10px; /* Add rounded borders */
+    overflow: hidden; /* Hide overflow content */
+}
+
+#dashboard .file-preview audio{
+    height: 100px !important;
+}
+
+#dashboard .back{
+    font-size: 2em;
+    background-color: transparent;
+    border: none;
+    color: white;
+    padding-bottom: 0.25em;
+    line-height: 2em;
+    padding-top: 0.25em;
+}
+#dashboard .back:hover{
+    color: grey;
+
+    font-size: 2.5em;
+    padding-bottom: 0em;
+    line-height: 2em;
+    padding-top: 0em;
+}
+
+#dashboard .file-preview img,
+#dashboard .file-preview video,
+#dashboard .file-preview audio {
+    width: 100%; /* Ensure media content fills the container */
+    height: 100%; /* Ensure media content fills the container */
+    object-fit: cover; /* Maintain aspect ratio and cover container */
+}
+#dashboard #dirchoice{
+    width: 3.8em
+}
+
+
+/* Background data (Original source: https://subtlepatterns.com/grid-me/) */
+/* Animations */
+@-webkit-keyframes bg-scrolling-reverse {
+    100% {
+        background-position: 50px 50px;
+    }
+}
+@-moz-keyframes bg-scrolling-reverse {
+    100% {
+        background-position: 50px 50px;
+    }
+}
+@-o-keyframes bg-scrolling-reverse {
+    100% {
+        background-position: 50px 50px;
+    }
+}
+@keyframes bg-scrolling-reverse {
+    100% {
+        background-position: 50px 50px;
+    }
+}
+@-webkit-keyframes bg-scrolling {
+    0% {
+        background-position: 50px 50px;
+    }
+}
+@-moz-keyframes bg-scrolling {
+    0% {
+        background-position: 50px 50px;
+    }
+}
+@-o-keyframes bg-scrolling {
+    0% {
+        background-position: 50px 50px;
+    }
+}
+@keyframes bg-scrolling {
+    0% {
+        background-position: 50px 50px;
+    }
+}
+/* Main styles */
+#dashboard  {
+    font: 400 16px/1.5 exo, ubuntu, "segoe ui", helvetica, arial, sans-serif;
+    text-align: center;
+    /* img size is 50x50 */
+    background: url("../images/square.png") repeat 0 0;
+    /* Safari 4+ */
+    -moz-animation: bg-scrolling-reverse 2.92s infinite;
+    /* Fx 5+ */
+    -o-animation: bg-scrolling-reverse 2.92s infinite;
+    /* Opera 12+ */
+    animation: bg-scrolling-reverse 2.92s infinite;
+    /* IE 10+ */
+    -webkit-animation-timing-function: linear;
+    -moz-animation-timing-function: linear;
+    -o-animation-timing-function: linear;
+    animation-timing-function: linear;
+}

@@ -1,0 +1,111 @@
+/*#a1{*/
+/*    top: -55vh;*/
+/*    right: 50px;*/
+
+/*    width: 250px;*/
+/*}*/
+
+/*#a2{*/
+/*    top: -58vh;*/
+/*    right: 50px;*/
+
+/*    width: 600px;*/
+/*}*/
+/*#a3{*/
+/*    top: -58vh;*/
+/*    right: 50px;*/
+
+/*    width: 500px;*/
+/*}*/
+/*#a4{*/
+/*    top: -60vh;*/
+/*    right: 50px;*/
+
+/*    width: 650px;*/
+/*}*/
+/*#a5{*/
+/*    top: -58vh;*/
+/*    right: 50px;*/
+
+/*    width: 450px;*/
+/*}*/
+/*#a6{*/
+/*    top: -58vh;*/
+/*    right: 350px;*/
+
+/*    width: 300px;*/
+/*}*/
+/*#a7{*/
+/*    top: -60vh;*/
+/*    right: 750px;*/
+
+/*    width: 600px;*/
+/*}*/
+/*#a8{*/
+/*    top: -55vh;*/
+/*    right: 50px;*/
+
+/*    width: 500px;*/
+/*}*/
+
+/*#a9{*/
+/*    top: -20vh;*/
+/*    right: 650px;*/
+
+/*    width: 700px;*/
+/*}*/
+
+/*#a10{*/
+/*    top: -60vh;*/
+/*    right: 650px;*/
+
+/*    width: 700px;*/
+/*}*/
+/*#a11{*/
+/*    top: -60vh;*/
+/*    right: 650px;*/
+
+/*    width: 700px;*/
+/*}*/
+/*#a12{*/
+/*    top: -20vh;*/
+/*    right: 750px;*/
+
+/*    width: 600px;*/
+/*}*/
+
+.caption {
+    width: 50vw;
+    text-align: center;
+    margin: 0 auto;
+    font-size: 1.2rem;
+    color: white;
+    font-weight: bold;
+    text-shadow:
+            -1px -1px 0 #000,
+            1px -1px 0 #000,
+            -1px 1px 0 #000,
+            1px 1px 0 #000;
+    position: absolute;
+    bottom: 1vh;
+    left: calc(50% - 25vw);
+}
+
+.image-fig{
+    border: red solid 1px;;
+    margin: 2vh auto;
+    height: calc(60vh);
+    position: relative;
+    display: inline-block; /* Ensures that the container only takes up as much space as the image */
+}
+.captionA{
+    float: right;
+    height: 0;
+    text-align: right;
+    position: relative;
+    font-size: 1.5rem;
+}
+
+.starbutton{
+    z-index: 10000;
+}
