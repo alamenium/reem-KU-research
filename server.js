@@ -40,7 +40,8 @@ const upload = multer({ storage: storage });
 app.post('/upload', upload.fields([
     { name: 'image', maxCount: 1 },
     { name: 'gif', maxCount: 1 },
-    { name: 'audio', maxCount: 2 } // Increase maxCount to 2 to allow multiple audio files
+    { name: 'audioEnglish', maxCount: 1 },
+    { name: 'audioArabic', maxCount: 1 }// Increase maxCount to 2 to allow multiple audio files
 ]), (req, res) => {
     console.log("uploading rn and the selected folder is : "+ selectedStory)
     if(selectedStory === "createNew" || selectedStory === "")  return res.status(400).send('No files were uploaded.');;
@@ -60,6 +61,8 @@ app.post('/upload', upload.fields([
     }
 
     // Move files to target path
+    let arabic = true;
+    const { audioEnglish, audioArabic } = req.files;
 
 // Move files to target path
     const moveFile = (source, target, callback) => {
@@ -67,12 +70,13 @@ app.post('/upload', upload.fields([
         const fileExtension = path.extname(source);
         // Generate new file name based on file type
         let newFileName = '';
-        if (fileExtension.startsWith('.mp3') || fileExtension.startsWith('.m4a')) {
+        if ((fileExtension.startsWith('.mp3') || fileExtension.startsWith('.m4a')) && arabic) {
+            arabic = false;
             // Arabic audio
-            newFileName = `arabic-audio${fileExtension}`;
-        } else if (fileExtension.startsWith('.wav') || fileExtension.startsWith('.mp4') || fileExtension.startsWith('.mov')) {
+            newFileName = `englsih-audio${fileExtension}`;
+        } else if (fileExtension.startsWith('.wav') || fileExtension.startsWith('.mp3') || fileExtension.startsWith('.m4a')) {
             // English audio
-            newFileName = `english-audio${fileExtension}`;
+            newFileName = `arabic-audio${fileExtension}`;
         } else if (fileExtension.startsWith('.png') || fileExtension.startsWith('.jpeg') || fileExtension.startsWith('.jpg')) {
             // Image
             newFileName = `page.jpg`; // Always convert to JPG
@@ -122,7 +126,8 @@ app.post('/upload', upload.fields([
     const filesToMove = [];
     if (req.files['image']) filesToMove.push(req.files['image'][0]);
     if (req.files['gif']) filesToMove.push(req.files['gif'][0]);
-    if (req.files['audio']) filesToMove.push(...req.files['audio']); // Push all audio files
+    if (req.files['audioEnglish']) filesToMove.push(req.files['audioEnglish']); // Push all audio files
+    if (req.files['audioArabic']) filesToMove.push(req.files['audioArabic']); // Push all audio files
 
     if (filesToMove.length === 0) {
         return res.status(400).send('No valid files were uploaded.');
@@ -132,6 +137,7 @@ app.post('/upload', upload.fields([
     let filesMoved = 0;
     filesToMove.forEach(file => {
         moveFile(file.path, path.join(directoryPath, file.originalname), (err) => {
+            console.log(file.originalname)
             filesMoved++;
             if (err) {
                 console.error(`Error moving file ${file.path} to ${path.join(directoryPath, file.originalname)}:`, err);
@@ -140,6 +146,22 @@ app.post('/upload', upload.fields([
                 res.send('Files uploaded successfully');
             }
         });
+    });
+});
+app.get('/uploads/*', (req, res) => {
+    const filePath = req.params[0]; // Use wildcard parameter to capture the full file path
+    const fullPath = path.join(__dirname, 'uploads', selectedStory, filePath);
+
+    // Check if the file exists
+    fs.access(fullPath, fs.constants.F_OK, (err) => {
+        if (err) {
+            // File not found, return 404
+            res.status(404).send('File not found');
+        } else {
+            // File exists, stream it to the response
+            const fileStream = fs.createReadStream(fullPath);
+            fileStream.pipe(res);
+        }
     });
 });
 
@@ -159,10 +181,10 @@ app.post('/saveJsonData/:directory', express.json(), (req, res) => {
     const filePath = path.join(__dirname, 'uploads',selectedStory , dir, 'data.json');
 
     for(const key in jsonData){
-        // Split the string by both '/' and '\'
+        if(!key.includes("caption"))
         jsonData[key] = jsonData[key].split(/[\/\\]/);
-
     }
+
     // Write the edited JSON data back to the file
     fs.writeFile(filePath, JSON.stringify(jsonData, null, 2), (err) => {
         if (err) {

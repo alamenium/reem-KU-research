@@ -1,7 +1,7 @@
 
 
 export const afterReadingE = [
-    // Page 1
+    // Page 1-2
     [
         "What do you think Hamad is feeling now?"
     ],

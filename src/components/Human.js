@@ -33,14 +33,6 @@ function Human({d_on = false, d_text = "", full = false, back = false}){
 
     }, [face, hair]);
 
-    useEffect(()=>{
-        if(back){
-            document.getElementById("eyes").style.paddingLeft = "40px";
-        }else{
-
-            document.getElementById("eyes").style.paddingLeft = "0";
-        }
-    })
     return (
 <div >
         <div id={"human"} style={{position: "relative"}}>
@@ -50,7 +42,7 @@ function Human({d_on = false, d_text = "", full = false, back = false}){
             {hair!=="none" && back === true &&  <img id={"hair"} src={currHair.replace("hair", "backHead").replace(".png", "B.png").replace("RB", "B").replace("BB", "B")} alt={""}/>}
             {hair!=="none" && back === false && !currHair.includes("6") &&  !currHair.includes("5") && <img id={"hair"} src={currHair} alt={""}/>}
             {hair!=="none" && back === false && (currHair.includes("6") || currHair.includes("5")) && <img id={"hairoffset"} src={currHair} alt={""}/>}
-            {eyes!=="none" && back === false&& <img id={"eyes"} src={eyes} alt={""}/>}
+            {eyes!=="none" && back === false&& <img id={"eyes"} src={eyes} alt={""} style={{paddingLeft: back? "40px":"0"}}/>}
             { (cochlear!=="none" && !back) && <img id={"cochlear"} src={cochlear} alt={""}/>}
             {clothes!=="none" && !full && <img id={"clothes"} src={clothes} alt={""}/>}
             {clothes!=="none" && full &&  <img id={"fullclothes"} src={clothes.replace("clothes", "full")} alt={""}/>}

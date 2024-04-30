@@ -6,17 +6,13 @@ import Human from "../../components/Human";
 import {setPage} from "./storySlice";
 import {useDispatch, useSelector} from "react-redux";
 import Caption from "./Captions"
-import {NavLink} from "react-router-dom";
-import {afterReadingE, beforeReadingE, afterReadingA, beforeReadingA} from "./Questions";
+import {NavLink, redirect} from "react-router-dom";
 
 function Story(){
     const {audio, caption, animation, avatar, cap} = useSelector((state) => state.settings);
     const {currStory, pageCount} = useSelector((state) => state.story);
     const dispatch = useDispatch();
     const {page} = useSelector((state) => state.story);
-    const beforeReading = (caption === "English")? beforeReadingE: beforeReadingA;
-    const afterReading = (caption === "English")? afterReadingE: afterReadingA;
-
     const [before, setBefore] = useState(['']);
     const [after, setAfter] = useState(['']);
     const [captions, setCaptions] = useState(['']);
@@ -32,14 +28,21 @@ function Story(){
         const fetchData = async () => {
             try {
                 // Fetch JSON data from wherever it is
-                const response = await fetch(`/data/${page}`);
+                const response = await fetch(`/uploads/${page}/data.json`);
                 const data = await response.json();
-
+                console.log("data");
+                console.log(data);
+                console.log(caption);
                 // Set the state based on the parsed JSON data
-                setBefore(data[`before-${caption}`]);
-                setAfter(data[`after-${caption}`]);
-                setCaptions(data[`captions-${caption}`]);
+                setBefore(data[`before-${caption.toLowerCase()}`]);
+                setAfter(data[`after-${caption.toLowerCase()}`]);
+                setCaptions(data[`caption-${caption.toLowerCase()}`]);
+                console.log(data[`caption-${caption.toLowerCase()}`]);
                 console.log(after);
+                console.log("page");
+                console.log(page);
+                console.log("caption");
+                console.log(data);
             } catch (error) {
                 console.error('Error fetching JSON data:', error);
             }
@@ -83,7 +86,7 @@ function Story(){
 
 
     useEffect(()=>{
-        if(((dia_index >= beforeReading[(page-1)/2].length)||avatar==="Off") && cap === 'On')
+        if(((dia_index >= before.length)||avatar==="Off") && cap === 'On')
             if(document.getElementById("voice") !== null)
                 document.getElementById("voice").play();
     }, [page])
@@ -92,45 +95,43 @@ function Story(){
     useEffect(()=>{
         setFileType("gif");
 
-        if(((dia_index >= beforeReading[(page-1)/2].length)||avatar==="Off") && cap === 'On')
+        if(((dia_index >= before.length)||avatar==="Off") && cap === 'On')
             if(document.getElementById("voice") !== null)
              document.getElementById("voice").play();
-    }, [((dia_index >= beforeReading[(page-1)/2].length)||avatar==="Off") && cap === 'On'])
+    }, [((dia_index >= before.length)||avatar==="Off") && cap === 'On'])
     const handleRightClick = () => {
+        console.log("going next: "+ dia_index);
         if((dia_index < (after.length + before.length))&& avatar==="On"){
+            console.log("next dia")
             setDia_index(dia_index+1);
         }
         else {
-            if (page < maxPage) {
-                dispatch(setPage(page + 1));
-                setLeftDis(false);
-            } else if (page === maxPage) {
-                dispatch(setPage(page + 1));
-                setRightDis(true);
-            } else {
-                setRightDis(true)
-            }
-            setDia_index(0);
+             setDia_index(0);
+             dispatch(setPage(page + 1));
         }
     }
+    
+    useEffect(()=>{
+        setLeftDis((page === 1) );
+        setRightDis((page === maxPage) && dia_index === (before.length + after.length -1));
+    },[maxPage, page])
     const handleLeftClick = () => {
 
-        if(dia_index > 0&& avatar==="On"){
-            setDia_index(dia_index-1);
+        if (dia_index > 0 && avatar === "On") {
+            setDia_index(dia_index - 1);
+        } else {
+            setDia_index(0);
+            dispatch(setPage(page - 1));
         }
-        else{
-            if (page > 2) {
-                setRightDis(false);
-                dispatch(setPage(page - 1));
-            } else if (page === 2) {
-                setLeftDis(true)
-                dispatch(setPage(page - 1));
-            } else {
-                setLeftDis(true)
-            }
-            setDia_index((after.length + before.length))
-        }    }
-
+    }
+    const handleEndStory = (e) => {
+        // Prevent the default behavior of the anchor tag
+        e.preventDefault();
+        // Open the link in a new tab
+        window.open("https://docs.google.com/forms/d/e/1FAIpQLSfS_G17ZtscgaOqvN3YejNgLh64O8Sy7sMzV2USYXTwrZaOFw/viewform", '_blank');
+        // Redirect the current page to the new URL
+        window.location.href = "http://localhost:3005"; // Change this to the desired URL
+    };
     const showhide = (hide)=>{
         if(!hide){
             document.getElementById("jpgstory").style.display = "none";
@@ -144,12 +145,12 @@ function Story(){
                 return (
                 <div>
                     <div id={"boxstory"}>
-                        {audio === "On" && <audio id={"voice"} src={`./uploads/${page}/${caption.toLowerCase()}-audio.mp3`} />}
+                        {audio === "On" && <audio id={"voice"} src={`/uploads/${page}/${caption.toLowerCase()}-audio.mp3`} />}
                         <div className={"image-fig"}     >
-                            <img className={"story-image"} id={"jpgstory"} src={`./uploads/${page}/page.jpg`} onClick={()=>console.log(captions[Number(page)-1])} onLoad={()=>showhide(true)} alt={""}/>
-                            {((dia_index >= before.length)||avatar==="Off") && <div className={"caption"} id={`a${page}`} key={2}>{captions[Number(page)-1]}</div>}
+                            <img className={"story-image"} id={"jpgstory"} src={`/uploads/${page}/page.jpg`} onClick={()=>console.log(captions)} onLoad={()=>showhide(true)} alt={""}/>
+                            {((dia_index >= before.length)||avatar==="Off") && <div className={"caption"} id={`a${page}`} key={2}>{captions}</div>}
                         </div>
-                        {animation === "On" && <img className={"story-image"} id={"gifstory"}  src={`./uploads/${page}/animated.gif`}
+                        {animation === "On" && <img className={"story-image"} id={"gifstory"}  src={`/uploads/${page}/animated.gif`}
                                                     onLoad={() => {
                                                         showhide(false)
                                                     }} onError={() => showhide(true)} alt={""}/>}
@@ -167,15 +168,15 @@ function Story(){
 
                         </div>
                     </div>
-                    {page === 25 && <NavLink
-                        exact
-                        to={"https://docs.google.com/forms/d/1m13GS18t5CUwHnHGbTj1eMIagBw-dVQ_Bg_Y6OjcrN0/edit"}
+                    {page === maxPage && <a
+                        onClick={handleEndStory}
+                        href={"https://docs.google.com/forms/d/e/1FAIpQLSfS_G17ZtscgaOqvN3YejNgLh64O8Sy7sMzV2USYXTwrZaOFw/viewform"}
                     >
-                        <button className={"starbutton"}  id ={"starrrr"}> End Story!</button>
-                    </NavLink>}
+                        <button className={"starbutton"}  id ={"starrrr"}>End Story!</button>
+                    </a>}
 
                     {avatar==="On" &&<div>
-                        <Human back={dia_index%3===0} full={true} d_on={dia_index !== beforeReading.length} d_text = {dia_index < beforeReading.length? beforeReading[dia_index]: dia_index === beforeReading.length? " ": afterReading[dia_index - 1 - beforeReading.length]} />
+                        <Human back={dia_index%3===0} full={true} d_on={dia_index !== before.length} d_text = {dia_index < before.length? before[dia_index]: dia_index === before.length? " ": after[dia_index - 1 - before.length]} />
                     </div>}
 
                 </div>
@@ -183,4 +184,4 @@ function Story(){
                 );
                 }
 
-                export default Story;
+export default Story;

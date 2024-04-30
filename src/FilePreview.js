@@ -14,22 +14,24 @@ const FilePreview = ({ fileName , dir}) => {
     }, [fileName]);
 
     const fetchPreviewUrl = (fileName) => {
-        axios.get(`http://localhost:3005/files/${dir}/${fileName}/preview`)
-            .then(response => {
-                setPreviewUrl(response.data.previewUrl.replace('files', 'uploads'));
+        // axios.get(`http://localhost:3005/files/${dir}/${fileName}/preview`)
+        //     .then(response => {
+        //         setPreviewUrl(response.data.previewUrl.replace('files', 'uploads'));
+        //
+        //         // Check if the previewed file is JSON
+        //         if (fileName.endsWith('.json')) {
+        //             axios.get(response.data.previewUrl.replace('files', 'uploads'))
+        //                 .then(response => {
+        //                     console.log('JSON data response:', response.data);
+        //                     setJsonData(response.data);
+        //                     setEditedData({ ...response.data });
+        //                 })
+        //                 .catch(error => console.error('Error fetching JSON data:', error));
+        //         }
+        //     })
+        //     .catch(error => console.error('Error fetching preview:', error));
 
-                // Check if the previewed file is JSON
-                if (fileName.endsWith('.json')) {
-                    axios.get(response.data.previewUrl.replace('files', 'uploads'))
-                        .then(response => {
-                            console.log('JSON data response:', response.data);
-                            setJsonData(response.data);
-                            setEditedData({ ...response.data });
-                        })
-                        .catch(error => console.error('Error fetching JSON data:', error));
-                }
-            })
-            .catch(error => console.error('Error fetching preview:', error));
+        setPreviewUrl(`http://localhost:3005/uploads/${dir}/${fileName}`)
     };
 
     const handleInputChange = (key, value) => {

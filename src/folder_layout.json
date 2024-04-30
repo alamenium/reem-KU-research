@@ -6,10 +6,6 @@
   ],
   "backHead": {
     "files": [
-<<<<<<< Updated upstream:client/src/folder_layout.json
-      ".black3B.png-autosave.kra",
-=======
->>>>>>> Stashed changes:src/folder_layout.json
       "black10B.PNG",
       "black1B.png",
       "black2B.png",
@@ -171,7 +167,6 @@
   },
   "full": {
     "files": [
-<<<<<<< Updated upstream:client/src/folder_layout.json
       ".DS_Store",
       ".Untitled_Artwork 48.png-autosave.kra",
       ".Untitled_Artwork 50.png-autosave.kra",
@@ -182,24 +177,18 @@
       "Untitled_Artwork 50 copy 4.png",
       "Untitled_Artwork 50 copy 4.png~",
       "Untitled_Artwork 50 copy 5.png",
-      "Untitled_Artwork 50 copy 5.png~",
-=======
->>>>>>> Stashed changes:src/folder_layout.json
+      "Untitled_Artwork 50 copy 5.png",
       "black.png",
       "blue.png",
       "orange.png",
       "pink.png",
       "purple.png",
       "red.png",
-<<<<<<< Updated upstream:client/src/folder_layout.json
       "white.png",
-      "white.png~"
-=======
       "Untitled_Artwork 50 copy 3.png",
       "Untitled_Artwork 50 copy 4.png",
       "Untitled_Artwork 50 copy 5.png",
       "white.png"
->>>>>>> Stashed changes:src/folder_layout.json
     ]
   },
   "glasses": {

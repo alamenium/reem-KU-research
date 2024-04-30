@@ -142,8 +142,10 @@ function Dashboard() {
         }
         if (uploadAudio) {
             // Append both Arabic and English audio files
-            formData.append('audio', uploadAudio);
-            formData.append('audio', uploadAudioArabic); // Assuming you have another state for Arabic audio file
+            formData.append('audioEnglish', uploadAudio);
+        }
+        if(uploadAudioArabic){
+            formData.append('audioArabic', uploadAudioArabic); // Assuming you have another state for Arabic audio file
         }
         axios.post('http://localhost:3005/upload', formData, { params: { directoryName } })
             .then(() => {
@@ -250,11 +252,11 @@ function Dashboard() {
                             <input id="arabicAudioInput" type="file" accept="audio/mp3" onChange={(e) => setUploadAudioArabic(e.target.files[0])} />
                         </div>
                         <label style={{ paddingRight: "1em"}}>CAPTIONS</label>
-                        <p>Entries are separated by slashes:  / or \</p>
                         <textarea value={captionEnglish} onChange={(e) => setCaptionEnglish(e.target.value)} placeholder="Caption (English)" />
                         <br />
                         <textarea value={captionArabic} onChange={(e) => setCaptionArabic(e.target.value)} placeholder="Caption (Arabic)" />
                         <br />
+                        <p>Entries are separated by slashes:  / or \</p>
                         <label style={{ paddingRight: "1em"}}>QUESTIONS before caption</label>
                         <textarea value={beforeEnglish} onChange={(e) => setBeforeEnglish(e.target.value)} placeholder="Before (English)" />
                         <br />

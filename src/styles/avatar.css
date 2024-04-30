@@ -37,9 +37,7 @@
     background-color: darkgray; /* Active button background color */
 }
 
-#avatar #test{
-    color: red !important;
-}
+
 
 #avatar body{
     background-image: url("../images/bg-white.png");

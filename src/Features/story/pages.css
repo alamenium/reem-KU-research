@@ -79,20 +79,20 @@
     text-align: center;
     margin: 0 auto;
     font-size: 1.2rem;
-    color: white;
+    color: black;
     font-weight: bold;
     text-shadow:
-            -1px -1px 0 #000,
-            1px -1px 0 #000,
-            -1px 1px 0 #000,
-            1px 1px 0 #000;
+            -1px -1px 0 #fff,
+            1px -1px 0 #fff,
+            -1px 1px 0 #fff,
+            1px 1px 0 #fff;
+
     position: absolute;
     bottom: 1vh;
     left: calc(50% - 25vw);
 }
 
 .image-fig{
-    border: red solid 1px;;
     margin: 2vh auto;
     height: calc(60vh);
     position: relative;

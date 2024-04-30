@@ -64,8 +64,8 @@
     background-color: lightgray !important;
     opacity: 1;
     mix-blend-mode: saturation;
-    width: 100px;
-    height: 100px;
+    width: 10vh;
+    height: 10vh;
     z-index: 1000;
     display: block;
     position: relative;
@@ -73,10 +73,10 @@
 
 .right-dis{
 
-    right: -100px;
+    right: -10vh;
 }
 .left-dis{
-    right: 100px;
+    right: 10vh;
 }
 #back-button{
     z-index: 10000;
@@ -111,6 +111,11 @@
     text-decoration: none !important;
     text-underline: none !important;
     z-index: 10000 !important;
+    margin-top: 1em;
+}
+
+#starrrr{
+    text-underline: none!important;
 }
 
 .overlay {
@@ -189,14 +194,22 @@
     font-size: 24px; /* Adjust font size for readability */
     font-family: Arial, sans-serif; /* Readable font */
     text-decoration: none; /* emove underline for links */
+    text-underline: none;
     transition: background-color 0.2s; /* Hover effect transition */
-    margin: auto auto;
+    margin: 5vh auto 0 ;
     border: white 4px solid;
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none !important;
+    text-underline:  none !important;
 }
 
 .starbutton:hover{
     background-color: white;
     color: orange;
+    border: orange 2px solid;
 }
 
