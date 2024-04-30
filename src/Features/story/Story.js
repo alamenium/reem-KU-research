@@ -10,12 +10,8 @@ import {NavLink} from "react-router-dom";
 import {afterReadingE, beforeReadingE, afterReadingA, beforeReadingA} from "./Questions";
 
 function Story(){
-<<<<<<< Updated upstream:client/src/Features/story/Story.js
     const {audio, caption, animation, avatar, cap} = useSelector((state) => state.settings);
-=======
-    const {audio, caption, animation, avatar, } = useSelector((state) => state.settings);
     const {currStory, pageCount} = useSelector((state) => state.story);
->>>>>>> Stashed changes:src/Features/story/Story.js
     const dispatch = useDispatch();
     const {page} = useSelector((state) => state.story);
     const beforeReading = (caption === "English")? beforeReadingE: beforeReadingA;
@@ -25,6 +21,13 @@ function Story(){
     const [after, setAfter] = useState(['']);
     const [captions, setCaptions] = useState(['']);
     const [maxPage, setMaxPage] = useState(999);
+
+
+    const [rightDis, setRightDis] = useState(false);
+    const [leftDis, setLeftDis] = useState(true);
+    const [fileType, setFileType] = useState("jpg");
+    const [dia_index, setDia_index] = useState(0);
+
     useEffect(() => {
         const fetchData = async () => {
             try {
@@ -70,19 +73,14 @@ function Story(){
         document.querySelector("body").style.backgroundImage = "url('../images/bg-white.png')";
     },[]);
 
-<<<<<<< Updated upstream:client/src/Features/story/Story.js
-=======
+
     useEffect(()=>{
         setFileType("gif");
         if(audio==="On" )
         document.getElementById("voice").play();
     }, [page]);
 
->>>>>>> Stashed changes:src/Features/story/Story.js
-    const [rightDis, setRightDis] = useState(false);
-    const [leftDis, setLeftDis] = useState(true);
-    const [fileType, setFileType] = useState("jpg");
-    const [dia_index, setDia_index] = useState(0);
+
 
     useEffect(()=>{
         if(((dia_index >= beforeReading[(page-1)/2].length)||avatar==="Off") && cap === 'On')
@@ -143,55 +141,46 @@ function Story(){
             document.getElementById("gifstory").style.display = "none";
         }
     }
-    return (
-        <div>
-            <div id={"boxstory"}>
-<<<<<<< Updated upstream:client/src/Features/story/Story.js
-                {audio==="On"  && <audio id={"voice"} src={`../audio/${caption.toLowerCase()}/${page}.mp3`} />}
-                <img className={"story-image"} id={"jpgstory"} src={`../images/story/${page}-${page+1}.jpg`} onLoad={()=>showhide(true)} alt={""}/>
-                {animation === "On" && <img className={"story-image"} id={"gifstory"} src={`../images/story/${page}-${page + 1}.gif`}
-=======
-                {audio === "On" && <audio id={"voice"} src={`./uploads/${currStory}/${page}/${caption.toLowerCase()}-audio.mp3`} />}
-                <div className={"image-fig"}     >
-                    <img className={"story-image"} id={"jpgstory"} src={`./stories/${currStory}/${page}/page.jpg`} onClick={()=>console.log(captions[Number(page)-1])} onLoad={()=>showhide(true)} alt={""}/>
-                    {((dia_index >= before.length)||avatar==="Off") && <div className={"caption"} id={`a${page}`} key={2}>{captions[Number(page)-1]}</div>}
+                return (
+                <div>
+                    <div id={"boxstory"}>
+                        {audio === "On" && <audio id={"voice"} src={`./uploads/${page}/${caption.toLowerCase()}-audio.mp3`} />}
+                        <div className={"image-fig"}     >
+                            <img className={"story-image"} id={"jpgstory"} src={`./uploads/${page}/page.jpg`} onClick={()=>console.log(captions[Number(page)-1])} onLoad={()=>showhide(true)} alt={""}/>
+                            {((dia_index >= before.length)||avatar==="Off") && <div className={"caption"} id={`a${page}`} key={2}>{captions[Number(page)-1]}</div>}
+                        </div>
+                        {animation === "On" && <img className={"story-image"} id={"gifstory"}  src={`./uploads/${page}/animated.gif`}
+                                                    onLoad={() => {
+                                                        showhide(false)
+                                                    }} onError={() => showhide(true)} alt={""}/>}
+                        {animation === "Off" && <span id={"gifstory"}></span>}
+                        <div id={"button-container"}>
+                            <button id={"back-button"}  className={"float-left"} onClick={handleLeftClick}>
+                                <img src={"../images/button.webp"}/>
+                            </button>
+                            {leftDis&&<div className={"btn-disabled float-left left-dis"}></div>}
+
+                            <button id={"right-button"} className={"float-right"} onClick={handleRightClick}>
+                                <img src={"../images/button.webp"}/>
+                            </button>
+                            {rightDis&&<div className={"btn-disabled float-right right-dis"}></div>}
+
+                        </div>
+                    </div>
+                    {page === 25 && <NavLink
+                        exact
+                        to={"https://docs.google.com/forms/d/1m13GS18t5CUwHnHGbTj1eMIagBw-dVQ_Bg_Y6OjcrN0/edit"}
+                    >
+                        <button className={"starbutton"}  id ={"starrrr"}> End Story!</button>
+                    </NavLink>}
+
+                    {avatar==="On" &&<div>
+                        <Human back={dia_index%3===0} full={true} d_on={dia_index !== beforeReading.length} d_text = {dia_index < beforeReading.length? beforeReading[dia_index]: dia_index === beforeReading.length? " ": afterReading[dia_index - 1 - beforeReading.length]} />
+                    </div>}
+
                 </div>
-                {animation === "On" && <img className={"story-image"} id={"gifstory"}  src={`./stories/${currStory}/${page}/animated.gif`}
->>>>>>> Stashed changes:src/Features/story/Story.js
-                      onLoad={() => {
-                          showhide(false)
-                      }} onError={() => showhide(true)} alt={""}/>}
-                {animation === "Off" && <span id={"gifstory"}></span>}
-<<<<<<< Updated upstream:client/src/Features/story/Story.js
-                {((dia_index >= beforeReading[(page-1)/2].length)||avatar==="Off") && cap === 'On' &&<Caption/>}
-=======
->>>>>>> Stashed changes:src/Features/story/Story.js
-                <div id={"button-container"}>
-                    <button id={"back-button"}  className={"float-left"} onClick={handleLeftClick}>
-                       <img src={"../images/button.webp"}/>
-                    </button>
-                    {leftDis&&<div className={"btn-disabled float-left left-dis"}></div>}
 
-                    <button id={"right-button"} className={"float-right"} onClick={handleRightClick}>
-                        <img src={"../images/button.webp"}/>
-                    </button>
-                    {rightDis&&<div className={"btn-disabled float-right right-dis"}></div>}
-                </div>
-            </div>
-            {page === 25 && <NavLink
-                exact
-                to={"https://docs.google.com/forms/d/1m13GS18t5CUwHnHGbTj1eMIagBw-dVQ_Bg_Y6OjcrN0/edit"}
-            >
-                <button className={"starbutton"}  id ={"starrrr"}> End Story!</button>
-            </NavLink>}
+                );
+                }
 
-            {avatar==="On" &&<div>
-                <Human back={dia_index%3==0} full={true} d_on={dia_index !== before.length} d_text = {dia_index < before.length? before[dia_index]: dia_index === before.length? " ": after[dia_index - 1 - before.length]} />
-            </div>}
-
-        </div>
-
-    );
-}
-
-export default Story;
+                export default Story;

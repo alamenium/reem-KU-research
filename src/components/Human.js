@@ -16,11 +16,8 @@ function Human({d_on = false, d_text = "", full = false, back = false}){
     const { face, hair, eyes,cochlear, clothes, glasses, mouth, nose } = useSelector((state) => state.avatar);
     const [currHair, changeCurrHair] = useState("none");
     const { page , started } = useSelector((state) => state.story);
-
-<<<<<<< Updated upstream:client/src/components/Human.js
     const {audio, caption, animation, avatar, cap} = useSelector((state) => state.settings);
-=======
->>>>>>> Stashed changes:src/components/Human.js
+
     useEffect(() => {
         if(full){
             document.getElementById("human").style.top="-2rem"
