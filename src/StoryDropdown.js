@@ -37,7 +37,6 @@ function StoryDropdown({fetchDirFunc}) {
     };
     const handleSaveSelectedStory = (newSelection) => {
         console.log("selected " + newSelection)
-        if (newSelection.trim() !== '') {
             axios.post('http://localhost:3005/selectedChoice', { story: newSelection })
                 .then(() => {
                     setSelectedChoice(newSelection);
@@ -48,14 +47,14 @@ function StoryDropdown({fetchDirFunc}) {
                     }
                 })
                 .catch(error => console.error('Error saving selected story:', error));
-        }
+
     };
 
     // Function to handle creation of a new choice
     const handleCreateNewChoice = () => {
         console.log("new choice: "+ newChoice)
-        setSelectedChoice(newChoice);
         if (newChoice.trim() !== '') {
+            setSelectedChoice(newChoice);
             axios.post('http://localhost:3005/choices', { choice: newChoice })
                 .then(() => {
                     fetchChoices(); // Fetch updated list of choices
@@ -73,7 +72,8 @@ function StoryDropdown({fetchDirFunc}) {
                 fetchChoices(); // Fetch updated list of choices
                 if (selectedChoice === choice) {
                     setSelectedChoice(''); // Reset selected choice if deleted
-                    handleSaveSelectedStory();
+                    handleSaveSelectedStory('');
+                    fetchDirFunc();
                 }
             })
             .catch(error => console.error('Error deleting choice:', error));
@@ -94,7 +94,8 @@ function StoryDropdown({fetchDirFunc}) {
                 <button onClick={handleCreateNewChoice}>Create</button>
             </div>
         )}
-        <button style={{backgroundColor: "red"}} onClick={() => handleDeleteChoice(selectedChoice)} disabled={!selectedChoice}>Delete selected Story</button>
+        {selectedChoice && <button style={{backgroundColor: "red"}} onClick={() => handleDeleteChoice(selectedChoice)}
+                 disabled={!selectedChoice}>Delete selected Story</button>}
 
     </div>
 );

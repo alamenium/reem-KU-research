@@ -74,34 +74,43 @@ function Story(){
 
     useEffect(() => {
         document.querySelector("body").style.backgroundImage = "url('../images/bg-white.png')";
+        document.getElementById("voice").pause()
+
+        if(page > maxPage)
+            dispatch(setPage(1));
     },[]);
 
 
     useEffect(()=>{
-        setFileType("gif");
-        if(audio==="On" )
-        document.getElementById("voice").play();
-    }, [page]);
 
+        let negator = 0;
+        if(before[0] === "") negator++;
 
-
-    useEffect(()=>{
-        if(((dia_index >= before.length)||avatar==="Off") && cap === 'On')
-            if(document.getElementById("voice") !== null)
+        if(((dia_index > before.length - negator )||avatar==="Off") && cap === 'On')
+            if(document.getElementById("voice") !== null) {
                 document.getElementById("voice").play();
+                console.log("player 1")
+            }
     }, [page])
 
 
     useEffect(()=>{
         setFileType("gif");
 
-        if(((dia_index >= before.length)||avatar==="Off") && cap === 'On')
-            if(document.getElementById("voice") !== null)
-             document.getElementById("voice").play();
+        let negator = 0;
+        if(before[0] === "") negator++;
+
+        if(((dia_index > before.length - negator )||avatar==="Off") && cap === 'On')
+            if(document.getElementById("voice") !== null) {
+                document.getElementById("voice").play();
+                console.log("player 1")
+            }
     }, [((dia_index >= before.length)||avatar==="Off") && cap === 'On'])
     const handleRightClick = () => {
-        console.log("going next: "+ dia_index);
-        if((dia_index < (after.length + before.length))&& avatar==="On"){
+        let negator = 0;
+        if(after[0]==="") negator++;
+        if(before[0] === "") negator++;
+        if((dia_index < (after.length + before.length + 1 - negator))&& avatar==="On"){
             console.log("next dia")
             setDia_index(dia_index+1);
         }
@@ -112,9 +121,23 @@ function Story(){
     }
     
     useEffect(()=>{
-        setLeftDis((page === 1) );
-        setRightDis((page === maxPage) && dia_index === (before.length + after.length -1));
-    },[maxPage, page])
+
+        let negator = 0;
+        if(after[0]==="") negator++;
+        if(before[0] === "") negator++;
+
+        setLeftDis((dia_index<1) );
+
+        if(avatar === "Off") {
+            setRightDis((page === maxPage));
+        }
+        else{
+            setRightDis(( dia_index === (before.length + after.length + 1 - negator)));
+        }
+        console.log("leftDis: "+ leftDis);
+
+        console.log("rightDis: "+ rightDis);
+    },[maxPage, page, dia_index])
     const handleLeftClick = () => {
 
         if (dia_index > 0 && avatar === "On") {

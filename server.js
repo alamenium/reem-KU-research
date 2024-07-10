@@ -43,6 +43,7 @@ app.post('/upload', upload.fields([
     { name: 'audioEnglish', maxCount: 1 },
     { name: 'audioArabic', maxCount: 1 }// Increase maxCount to 2 to allow multiple audio files
 ]), (req, res) => {
+    console.log("req.files " )
     console.log("uploading rn and the selected folder is : "+ selectedStory)
     if(selectedStory === "createNew" || selectedStory === "")  return res.status(400).send('No files were uploaded.');;
     // Check if any files were uploaded
@@ -66,6 +67,7 @@ app.post('/upload', upload.fields([
 
 // Move files to target path
     const moveFile = (source, target, callback) => {
+        console.log("source: "+source)
         // Extract file extension
         const fileExtension = path.extname(source);
         // Generate new file name based on file type
@@ -73,19 +75,26 @@ app.post('/upload', upload.fields([
         if ((fileExtension.startsWith('.mp3') || fileExtension.startsWith('.m4a')) && arabic) {
             arabic = false;
             // Arabic audio
-            newFileName = `englsih-audio${fileExtension}`;
+            newFileName = `english-audio${fileExtension}`;
+            newFileName = `english-audio${fileExtension}`;
+            console.log("english newFileName "+newFileName)
         } else if (fileExtension.startsWith('.wav') || fileExtension.startsWith('.mp3') || fileExtension.startsWith('.m4a')) {
             // English audio
             newFileName = `arabic-audio${fileExtension}`;
+            console.log("arabic newFileName "+newFileName)
         } else if (fileExtension.startsWith('.png') || fileExtension.startsWith('.jpeg') || fileExtension.startsWith('.jpg')) {
             // Image
             newFileName = `page.jpg`; // Always convert to JPG
+            console.log("image newFileName "+newFileName)
         } else if (fileExtension.startsWith('.gif')) {
             // GIF
             newFileName = `animated${fileExtension}`;
+            console.log("gif newFileName "+newFileName)
         } else {
             // Other files
             newFileName = `file${fileExtension}`;
+            console.log("other newFileName "+newFileName)
+
         }
         // Construct target path with new file name
         const newTarget = path.join(directoryPath, newFileName);
@@ -121,13 +130,12 @@ app.post('/upload', upload.fields([
         }
     };
 
-
     // Access uploaded files using req.files
     const filesToMove = [];
     if (req.files['image']) filesToMove.push(req.files['image'][0]);
     if (req.files['gif']) filesToMove.push(req.files['gif'][0]);
-    if (req.files['audioEnglish']) filesToMove.push(req.files['audioEnglish']); // Push all audio files
-    if (req.files['audioArabic']) filesToMove.push(req.files['audioArabic']); // Push all audio files
+    if (req.files['audioEnglish']) filesToMove.push(req.files['audioEnglish'][0]); // Push all audio files
+    if (req.files['audioArabic']) filesToMove.push(req.files['audioArabic'][0]); // Push all audio files
 
     if (filesToMove.length === 0) {
         return res.status(400).send('No valid files were uploaded.');
@@ -136,6 +144,8 @@ app.post('/upload', upload.fields([
     // Move files to directory
     let filesMoved = 0;
     filesToMove.forEach(file => {
+        console.log("directoryPath "+ directoryPath)
+        console.log("file.originalname "+ file.originalname)
         moveFile(file.path, path.join(directoryPath, file.originalname), (err) => {
             console.log(file.originalname)
             filesMoved++;
@@ -151,7 +161,7 @@ app.post('/upload', upload.fields([
 app.get('/uploads/*', (req, res) => {
     const filePath = req.params[0]; // Use wildcard parameter to capture the full file path
     const fullPath = path.join(__dirname, 'uploads', selectedStory, filePath);
-
+    console.log("fullPath "+ fullPath)
     // Check if the file exists
     fs.access(fullPath, fs.constants.F_OK, (err) => {
         if (err) {
@@ -169,9 +179,11 @@ app.get('/uploads/*', (req, res) => {
 app.use(express.json()); // Middleware to parse JSON requests
 
 app.post('/saveJsonData/:directory', express.json(), (req, res) => {
-
+    console.log("saving data")
     if(selectedStory === "createNew" || selectedStory === "")  return res.status(400).send('No data was uploaded.');;
     const jsonData = req.body;
+    console.log(jsonData)
+    console.log(jsonData["caption-english"])
     const dir = req.params.directory;
 
     if (!jsonData || !dir) {
@@ -181,8 +193,10 @@ app.post('/saveJsonData/:directory', express.json(), (req, res) => {
     const filePath = path.join(__dirname, 'uploads',selectedStory , dir, 'data.json');
 
     for(const key in jsonData){
-        if(!key.includes("caption"))
-        jsonData[key] = jsonData[key].split(/[\/\\]/);
+        if(!key.includes("caption")) {
+            let val = String(jsonData[key]);
+            jsonData[key] = val.split(/[\/\\]/);
+        }
     }
 
     // Write the edited JSON data back to the file
@@ -260,6 +274,7 @@ app.post('/choices', (req, res) => {
 
 // Endpoint to delete a choice
 app.delete('/choices/:choice', (req, res) => {
+    console.log("DEL /choices/:choice'")
     const choiceToDelete = req.params.choice;
     const choicesFilePath = path.join(__dirname, 'choices.json');
     try {
@@ -274,6 +289,9 @@ app.delete('/choices/:choice', (req, res) => {
             // Write the updated choices back to the file
             fs.writeFileSync(choicesFilePath, JSON.stringify(choices, null, 2));
 
+            fs.writeFileSync('selected-story.json', JSON.stringify({ story: "" }, null, 2));
+
+            selectedStory =  '';
             // Delete the directory associated with the choice
             const directoryPath = path.join(__dirname, 'uploads', choiceToDelete);
             fs.rmdir(directoryPath, { recursive: true }, (err) => {
@@ -284,6 +302,8 @@ app.delete('/choices/:choice', (req, res) => {
                 console.log('Directory deleted successfully');
                 res.json({ message: 'Choice deleted successfully' });
             });
+
+            console.log("after deletion, selected story is " )
             selectedStory = '';
         } else {
             res.status(404).json({ error: 'Choice not found' });
@@ -295,6 +315,7 @@ app.delete('/choices/:choice', (req, res) => {
 });
 
 app.get('/selectedChoice', (req, res) => {
+    console.log("GET /selectedChoice'")
     try {
         // Read the currently selected story from a JSON file
         selectedStoryJson = JSON.parse(fs.readFileSync('selected-story.json', 'utf8'));
@@ -311,12 +332,13 @@ app.get('/selectedChoice', (req, res) => {
 
 // Endpoint to update the currently selected story
 app.post('/selectedChoice', (req, res) => {
+    console.log("POST /selectedChoice' " + req.body.story)
     try {
         const { story } = req.body;
-
-        if (!story || story.trim() === '') {
-            return res.status(400).json({ error: 'Invalid story' });
-        }
+        //
+        // if (!story || story.trim() === '') {
+        //     return res.status(400).json({ error: 'Invalid story' });
+        // }
 
         // Write the updated selected story to the JSON file
         fs.writeFileSync('selected-story.json', JSON.stringify({ story }, null, 2));
@@ -357,13 +379,14 @@ app.get('/files', (req, res) => {
             console.error('Error reading directory:', err);
             return res.status(500).send('Error reading directory');
         }
+        console.log("files " + files)
         res.json(files);
     });
 });
 app.get('/directory', (req, res) => {
     const dir = req.query.directory || '';
     const directoryPath = path.join(__dirname, 'uploads',selectedStory, dir);
-
+    console.log("GET /directory " +directoryPath)
     if(selectedStory === "createNew") return res.status(200).json("{}")
     console.log("files " +directoryPath)
     fs.readdir(directoryPath, (err, files) => {
@@ -425,7 +448,7 @@ app.delete('/dir/:dirName', (req, res) => {
     });
 });
 app.get('/count-pages', (req, res) => {
-    const directoryPath = path.join(__dirname, 'uploads',selectedStory);
+    const directoryPath = path.join(__dirname, 'uploads', selectedStory);
     console.log("counting pages in: "+directoryPath);
     fs.readdir(directoryPath, { withFileTypes: true }, (err, files) => {
         if (err) {

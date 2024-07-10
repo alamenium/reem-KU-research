@@ -23,6 +23,7 @@ function Dashboard() {
     const [currentDirectory, setCurrentDirectory] = useState('');
     const [directoryStack, setDirectoryStack] = useState([]);
     const [pageCount, setPageCount] = useState(null);
+    const [selectedStory, setSelectedStory] = useState('');
 
     const [uploadAudioArabic, setUploadAudioArabic] = useState(null);
     const fileExtensions = ['png', 'jpeg', 'gif', 'mp4', 'mov', 'pdf', 'json', 'mp3', 'm4a', 'jpg', 'jpeg', 'gif', 'png', 'pdf', 'mp4', 'mov', 'mp3', 'wav'];
@@ -90,6 +91,7 @@ function Dashboard() {
 
     // Function to fetch files
     const fetchFiles = (directory = '') => {
+        console.log("fetchFiles() ")
         setLoading(true);
         axios.get(`http://localhost:3005/files/${directory}`)
             .then(response => {
@@ -102,6 +104,13 @@ function Dashboard() {
     };
 
     const fetchDir = (directory = '') => {
+        axios.get('http://localhost:3005/selectedChoice')
+            .then(response => {
+                setSelectedStory(response.data.story);
+            })
+            .catch(error => console.error('Error fetching selected choice:', error));
+        // eslint-disable-next-line no-template-curly-in-string
+        console.log(`fetchDir() http://localhost:3005/directory${"?directory=" + directory}`)
         setLoading(true);
         axios.get(`http://localhost:3005/directory${"?directory=" + directory}`)
             .then(response => {
@@ -120,17 +129,20 @@ function Dashboard() {
     };
     // Function to handle file click
     const handleFileClick = (fileName) => {
+        console.log("handleFileClick() ")
         setSelectedFile(fileName);
     };
 
     // Function to handle directory click
     const handleDirClick = (fileName) => {
+        console.log("handleDirClick() ")
         setSelectedFile("");
         fetchDir(fileName);
     };
 
     // Function to handle file upload
     const handleFileUpload = () => {
+        console.log("handleFileUpload() ")
         fetchDir(directoryStack.pop())
         setLoading(true);
         const formData = new FormData();
@@ -141,7 +153,6 @@ function Dashboard() {
             formData.append('gif', uploadGif);
         }
         if (uploadAudio) {
-            // Append both Arabic and English audio files
             formData.append('audioEnglish', uploadAudio);
         }
         if(uploadAudioArabic){
@@ -191,6 +202,7 @@ function Dashboard() {
 
     // Function to handle directory delete
     const handleDirDelete = (fileName) => {
+        console.log("handleDirDelete() ")
         setLoading(true);
         axios.delete(`http://localhost:3005/dir/${fileName}`)
             .then(() => {
@@ -203,6 +215,7 @@ function Dashboard() {
 
     // Function to save text inputs
     const saveTextInputs = (dir) => {
+        console.log("saveTextInputs() ")
         setLoading(true);
         const jsonData = {
             'caption-english': captionEnglish,
@@ -270,7 +283,7 @@ function Dashboard() {
                         <label style={{display: "inline", paddingRight: "1em"}}> Page number</label>
                         <input  id={"dirchoice"} type="number" value={directoryName} onChange={(e) => setDirectoryName(e.target.value)} placeholder="Directory Name" />
                         <br /><br /><br />
-                        <button className="upload-button" onClick={handleFileUpload}>Upload &amp; Save</button>
+                        {selectedStory && selectedStory !== "createNew" && <button className="upload-button" onClick={handleFileUpload}>Upload &amp; Save</button>}
                     </div>
 
                     <div className="upload-section">
@@ -278,10 +291,10 @@ function Dashboard() {
                         <StoryDropdown fetchDirFunc = {fetchDir.bind(this)}/>
                         {currentDirectory && <button style = {{display: "inline", height: "1em", margin: "0"}} key={"delete-btn"} className={"back"} onClick={() => fetchDir(directoryStack.pop())}>⬅</button>}
 
-                        {!currentDirectory && <h2 style = {{display: "inline"}}>Pages</h2>}
-                        <p>{`Page count: ${pageCount? pageCount:0}`}</p>
+                        {!currentDirectory && selectedStory && <h2 style = {{display: "inline"}}>Pages</h2>}
+                        {selectedStory && <p>{`Page count: ${pageCount ? pageCount : 0}`}</p>}
 
-                        <ul className="file-list">
+                        {selectedStory &&  <ul className="file-list">
                             {files != null && files.map(file => {
                                 if (fileExtensions.every(extension => !file.includes(extension))) {
                                     return <li key={file} className={"dir"}>
@@ -296,6 +309,7 @@ function Dashboard() {
                                 }
                             })}
                         </ul>
+                        }
 
                         {selectedFile && (
                             <>

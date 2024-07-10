@@ -38,9 +38,9 @@ function SignupPage() {
         if (password.length < 8) {
             alert('Password must have at least 8 characters.');
         } else if (username.length < 3) {
-            alert('Username must contain at least 6 characters.');
+            alert('Username must contain at least 3 characters.');
         } else if (username.length > 64) {
-            alert('Username must not contain more than 16 characters.');
+            alert('Username must not contain more than 64 characters.');
         } else {
             setIsPending(true);
             signup({ username, password })
